@@ -1,0 +1,235 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Container for the entire quiz component */
+.quiz-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header styling */
+.quiz-header {
+  background-color: #212529;
+  color: white;
+  padding: 25px 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Question container styling */
+.question-container {
+  margin-bottom: 20px;
+}
+
+/* Styling for the question text */
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  margin-left: 20px;
+}
+
+/* Options styling */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.option {
+  background-color: #dfe7fd;
+  border: 2px solid transparent;
+  padding: 15px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1 1 45%;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option.selected {
+  background-color: #a6c8ff;
+  color: #333;
+  border-color: #BAD5FF;
+}
+
+/* Hover effect for options */
+.option:hover {
+  background-color: #c3d6ff;
+}
+
+/* Navigation buttons styling */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #61A1FE;
+  cursor: not-allowed;
+}
+
+/* Action buttons styling for Quiz Review and Submit */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.review-button,
+.submit-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 15%;
+  transition: background-color 0.3s;
+}
+
+.review-button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.review-button:hover {
+  background-color: #138496;
+}
+
+.submit-button {
+  background-color: #0DCAF0;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #138496;
+}
+
+/* Container for the review component */
+.review-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.review-header {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Styling for each review question */
+.review-question {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Correct and incorrect answer background colors */
+.review-question.correct {
+  background-color: #d4edda; /* Light green */
+  border: 1px solid #c3e6cb;
+}
+
+.review-question.incorrect {
+  background-color: #f8d7da; /* Light red */
+  border: 1px solid #f5c6cb;
+}
+
+/* Styling for the question text */
+.question-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Options styling */
+.options {
+  margin: 10px 0;
+  display: flex;
+}
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 400px; /* hoặc dùng width cụ thể như 300px */
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
