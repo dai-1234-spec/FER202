@@ -1,0 +1,10 @@
+.login-card {
+    width: 400px; /* Thiết lập chiều rộng của khung đăng nhập */
+    border-radius: 10px; /* Góc bo tròn */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng cho khung */
+  }
+  
+  .container {
+    background-color: #282C34; /* Màu nền cho trang */
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu cho khung */
+  }
