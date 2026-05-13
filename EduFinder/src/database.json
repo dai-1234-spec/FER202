@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "DS190161",
+      "username": "DS190161",
+      "password": "123456",
+      "fullName": "Sinh viên DS190161"
+    },
+    {
+      "id": "DS190140",
+      "username": "DS190140",
+      "password": "123456",
+      "fullName": "Sinh viên DS190140"
+    },
+    {
+      "id": "DS190267",
+      "username": "DS190267",
+      "password": "123456",
+      "fullName": "Sinh viên DS190267"
+    },
+    {
+      "id": "DS190163",
+      "username": "DS190163",
+      "password": "123456",
+      "fullName": "Sinh viên DS190163"
+    },
+    {
+      "id": "HE186875",
+      "username": "HE186875",
+      "password": "123456",
+      "fullName": "Sinh viên HE186875"
+    }
+  ]
+}
