@@ -5,7 +5,6 @@ import { Container, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
-  // Calculate total cost
   const totalCost = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (

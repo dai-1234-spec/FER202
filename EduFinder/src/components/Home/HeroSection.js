@@ -1,65 +1,76 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, MapPin, Star, ArrowRight, Languages, BookOpen, GraduationCap, Globe, CheckCircle } from "lucide-react";
+import { Search, MapPin, Star, ArrowRight, Languages, BookOpen, GraduationCap, Globe, CheckCircle, MessageCircle, Briefcase, Smile } from "lucide-react";
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, PresentationControls, Environment, ContactShadows, Float, Stage } from "@react-three/drei";
+import { Suspense } from "react";
+
+const Model = ({ url }) => {
+  const { scene } = useGLTF(url);
+  return <primitive object={scene} scale={2} />;
+};
 
 const languageCards = [
   {
-    title: "Tiếng Anh",
-    count: "1,200+ trung tâm",
-    icon: <Languages className="w-6 h-6 text-primary" />,
-    bgClass: "bg-[#dae2ff]",
+    title: "Luyện thi IELTS",
+    count: "HƠN 500 KHÓA HỌC",
+    icon: <BookOpen className="w-6 h-6 text-[#1e3a8a]" />,
+    bgClass: "bg-[#e0e7ff]",
   },
   {
-    title: "Tiếng Trung",
-    count: "450+ trung tâm",
-    icon: <Globe className="w-6 h-6 text-[#8a5a00]" />,
-    bgClass: "bg-[#ffddb3]",
+    title: "Tiếng Anh Giao tiếp",
+    count: "HƠN 350 KHÓA HỌC",
+    icon: <MessageCircle className="w-6 h-6 text-[#854d0e]" />,
+    bgClass: "bg-[#fef3c7]",
   },
   {
-    title: "Tiếng Nhật",
-    count: "380+ trung tâm",
-    icon: <BookOpen className="w-6 h-6 text-[#00688a]" />,
-    bgClass: "bg-[#afecff]",
+    title: "Tiếng Anh Thương mại",
+    count: "HƠN 200 KHÓA HỌC",
+    icon: <Briefcase className="w-6 h-6 text-[#0e7490]" />,
+    bgClass: "bg-[#cffafe]",
   },
   {
-    title: "Tiếng Hàn",
-    count: "320+ trung tâm",
-    icon: <GraduationCap className="w-6 h-6 text-[#8a0026]" />,
-    bgClass: "bg-[#ffdad6]",
+    title: "Tiếng Anh Trẻ em",
+    count: "HƠN 400 KHÓA HỌC",
+    icon: <Smile className="w-6 h-6 text-[#991b1b]" />,
+    bgClass: "bg-[#fee2e2]",
   },
 ];
 
 const featuredCenters = [
   {
-    name: "British Council",
-    rating: "4.9",
+    id: 12,
+    name: "IELTS Fighter - Chiến binh IELTS",
+    rating: "5.0",
     category: "IELTS",
-    location: "Quận 1",
-    description: "Hội đồng Anh là tổ chức quốc tế về hợp tác văn hóa và cơ hội giáo dục của Vương quốc Anh.",
-    image: "/center-placeholder.png",
+    location: "Quận Hải Châu",
+    description: "IELTS Fighter là trung tâm đào tạo IELTS hàng đầu Việt Nam với lộ trình học tinh gọn, dễ hiểu.",
+    image: "https://talkclass.edu.vn/wp-content/uploads/2025/08/trung-tam-tieng-anh-IELTS-Fighter.jpg",
   },
   {
-    name: "VUS - Anh Văn Hội Việt Mỹ",
-    rating: "4.8",
+    id: 21,
+    name: "DOL English - IELTS Đình Lực",
+    rating: "5.0",
+    category: "Học thuật",
+    location: "Quận Hải Châu",
+    description: "Học viện Tiếng Anh Tư duy đầu tiên tại Việt Nam với phương pháp Linearthinking độc quyền.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR4W5Z28IRjPuDlXpNVMjySjOGyS-WnnF9pw&s",
+  },
+  {
+    id: 16,
+    name: "E-best English - Đà Nẵng",
+    rating: "4.9",
     category: "Giao tiếp",
-    location: "Hệ thống",
-    description: "Hệ thống đào tạo Anh ngữ lâu đời và uy tín nhất Việt Nam với tiêu chuẩn quốc tế NEAS.",
-    image: "/center-placeholder.png",
-  },
-  {
-    name: "ILA Vietnam",
-    rating: "4.7",
-    category: "Trẻ em",
-    location: "Toàn quốc",
-    description: "Tổ chức giáo dục Anh ngữ hàng đầu Việt Nam với phương pháp học tư duy thế kỷ 21.",
-    image: "/center-placeholder.png",
+    location: "Quận Thanh Khê",
+    description: "E-best English chuyên đào tạo Tiếng Anh Giao tiếp và TOEIC với môi trường học tập năng động.",
+    image: "https://ebest.edu.vn/wp-content/uploads/2024/01/banner-1.webp",
   },
 ];
 
 const HeroSection = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCity, setSelectedCity] = useState("Hồ Chí Minh");
+  const [selectedCity, setSelectedCity] = useState("Đà Nẵng");
 
   const handleSearch = (e) => {
     if (e) e.preventDefault();
@@ -102,18 +113,20 @@ const HeroSection = () => {
       </section>
 
       {/* Language Cards */}
-      <section className="max-w-7xl mx-auto px-8 -mt-20 relative z-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="max-w-7xl mx-auto px-8 -mt-24 relative z-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
         {languageCards.map((card) => (
           <div 
             key={card.title} 
-            onClick={() => navigate(`/explore?q=${card.title}`)}
-            className="bg-white p-6 rounded-xl border border-[#c3c6d6] shadow-md hover:shadow-lg transition-all flex flex-col items-center text-center gap-3 group cursor-pointer"
+            onClick={() => navigate(`/center-list?q=${card.title}`)}
+            className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all flex flex-col items-center text-center gap-4 group cursor-pointer"
           >
-            <div className={`w-14 h-14 ${card.bgClass} rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform`}>
+            <div className={`w-16 h-16 ${card.bgClass} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
               {card.icon}
             </div>
-            <h3 className="text-primary font-bold text-lg">{card.title}</h3>
-            <p className="text-[#434654] text-xs font-medium uppercase tracking-wider">{card.count}</p>
+            <div className="flex flex-col gap-1">
+              <h3 className="text-[#111827] font-black text-lg leading-tight">{card.title}</h3>
+              <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest">{card.count}</p>
+            </div>
           </div>
         ))}
       </section>
@@ -135,24 +148,24 @@ const HeroSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredCenters.map((center) => (
-            <div key={center.name} className="bg-white rounded-2xl overflow-hidden border border-[#c3c6d6] shadow-sm hover:shadow-xl transition-all flex flex-col group">
-              <div className="relative h-52 overflow-hidden">
-                <img src={center.image} alt={center.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+            <div key={center.id} className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all flex flex-col group">
+              <div className="relative h-60 overflow-hidden">
+                <img src={center.image} alt={center.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
                   <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <span className="text-sm font-bold text-[#191c1e]">{center.rating}</span>
+                  <span className="text-sm font-black text-[#191c1e]">{center.rating}</span>
                 </div>
               </div>
-              <div className="p-6 flex flex-col gap-4">
+              <div className="p-8 flex flex-col gap-5">
                 <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-[#dae2ff] text-primary text-xs font-bold rounded-full">{center.category}</span>
-                  <span className="px-3 py-1 bg-[#edeef0] text-[#434654] text-xs font-bold rounded-full">{center.location}</span>
+                  <span className="px-3 py-1 bg-primary/5 text-primary text-[10px] font-black rounded-full uppercase tracking-widest">{center.category}</span>
+                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-[10px] font-black rounded-full uppercase tracking-widest">{center.location}</span>
                 </div>
-                <h3 className="text-lg font-bold text-[#191c1e] line-clamp-1">{center.name}</h3>
-                <p className="text-[#434654] text-sm leading-relaxed line-clamp-2 h-10">{center.description}</p>
+                <h3 className="text-xl font-black text-[#191c1e] line-clamp-1 group-hover:text-primary transition-colors">{center.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 h-10 font-medium">{center.description}</p>
                 <button 
-                  onClick={() => navigate('/center-detail')}
-                  className="mt-2 w-full py-2.5 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all"
+                  onClick={() => navigate(`/center-detail?id=${center.id}`)}
+                  className="mt-2 w-full py-4 border-2 border-primary text-primary font-black rounded-2xl hover:bg-primary hover:text-white transition-all uppercase text-xs tracking-widest"
                 >
                   Xem chi tiết
                 </button>
@@ -188,8 +201,44 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-[450px] h-[400px] overflow-hidden">
-             <img src="/guidance.png" alt="Student studying" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+          <div className="w-full lg:w-[550px] h-[550px] relative group">
+            {/* Ultra-Vibrant Neon Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-violet-500/30 to-blue-600/40 rounded-[4rem] blur-[120px] opacity-80 group-hover:opacity-100 transition-all duration-1000 pointer-events-none" />
+            
+            {/* Deep Glassmorphism Podium */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] bg-white/70 backdrop-blur-3xl rounded-full border-2 border-white/50 shadow-[0_0_100px_rgba(0,102,255,0.25)] pointer-events-none" />
+            
+            {/* Bold Interactive Rings */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[92%] border-4 border-dashed border-primary/20 rounded-full animate-spin-slow pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] border-2 border-primary/30 rounded-full animate-reverse-spin pointer-events-none" />
+
+            <div className="w-full h-full relative z-20">
+              <Suspense fallback={
+                <div className="w-full h-full flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-[2.5rem] border-2 border-dashed border-gray-100">
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Đang tải mô hình...</span>
+                  </div>
+                </div>
+              }>
+                <Canvas shadows dpr={[1, 2]}>
+                  <Suspense fallback={null}>
+                    <Stage environment="city" intensity={0.6} contactShadow={true} adjustCamera={true}>
+                      <PresentationControls
+                        speed={1.5}
+                        global
+                        zoom={1.2}
+                        polar={[-0.1, Math.PI / 4]}
+                      >
+                        <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+                          <Model url="/textures/fpt.glb" />
+                        </Float>
+                      </PresentationControls>
+                    </Stage>
+                  </Suspense>
+                </Canvas>
+              </Suspense>
+            </div>
           </div>
         </div>
       </section>

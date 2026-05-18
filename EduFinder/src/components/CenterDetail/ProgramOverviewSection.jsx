@@ -3,7 +3,7 @@ import { Users, Globe, Target, Map, Clock, MapPin } from "lucide-react";
 
 const overviewStats = [
   { icon: <Users size={20} />, value: "25k+", label: "Học viên" },
-  { icon: <Globe size={20} />, value: "12", label: "Ngôn ngữ" },
+  { icon: <Globe size={20} />, value: "02", label: "Ngôn ngữ" },
   { icon: <Target size={20} />, value: "98%", label: "Đạt mục tiêu" },
   { icon: <Map size={20} />, value: "08", label: "Cơ sở" },
 ];

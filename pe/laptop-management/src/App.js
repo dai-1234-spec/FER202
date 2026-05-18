@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 import LaptopList from './components/LaptopList';
 import LaptopDetail from './components/LaptopDetail';
+import NotFound from './components/NotFound';
 
 export const UserContext = createContext(null);
 
@@ -15,9 +16,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<Login setUser={setUser} />} />
-          <Route path="/laptops" element={user ? <LaptopList /> : <Navigate to="/login" />} />
-          <Route path="/laptops/:id" element={user ? <LaptopDetail /> : <Navigate to="/login" />} />
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="/laptops" element={user ? <LaptopList /> : <Navigate to="/*" />} />
+          <Route path="/laptops/:id" element={user ? <LaptopDetail /> : <Navigate to="/*" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </UserContext.Provider>

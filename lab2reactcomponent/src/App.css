@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.menu-section {
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+.menu-card {
+  background: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu-card .card-title {
+  text-align: left;
+  font-weight: bold;
+  color: #333; /* Adjust color if necessary */
+}
+.menu-card .card-title2 {
+  text-align: left;
+  color: #333; /* Adjust color if necessary */
+}
+.menu-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: yellow;
+  color: black;
+}
+
+.booking-form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: white;
+  color: black;
+  border: none;
+}
+
+.booking-form button {
+  background-color: #ffc107;
+  color: black;
+}
+
+.buy-button {
+  background-color: black;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.buy-button:hover {
+  background-color: #ff3333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

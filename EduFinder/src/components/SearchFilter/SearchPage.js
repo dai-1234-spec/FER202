@@ -12,10 +12,49 @@ const MapController = ({ center }) => {
   const map = useMap();
   useEffect(() => {
     if (center) {
-      map.setView(center, 13, { animate: true });
+      const currentCenter = map.getCenter();
+      if (currentCenter.lat !== center[0] || currentCenter.lng !== center[1]) {
+        map.setView(center, 13, { animate: true });
+      }
     }
   }, [center, map]);
   return null;
+};
+
+const MapCenterHandler = ({ center }) => {
+  const map = useMap();
+  useEffect(() => {
+    if (center) {
+      const currentCenter = map.getCenter();
+      if (currentCenter.lat !== center.lat || currentCenter.lng !== center.lng) {
+        map.setView([center.lat, center.lng], 14, { animate: true });
+      }
+    }
+  }, [center, map]);
+  return null;
+};
+
+const createPriceIcon = (center, isActive) => {
+  return L.divIcon({
+    className: 'custom-div-icon',
+    html: `
+      <div class="relative">
+        <div class="w-8 h-8 rounded-full shadow-xl flex items-center justify-center transition-all border-2 ${
+          isActive 
+          ? "bg-[#0052cc] text-white border-white scale-125 z-[2000]" 
+          : "bg-white text-[#0052cc] border-[#0052cc] hover:scale-110"
+        }">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+          </svg>
+        </div>
+        ${isActive ? '<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#0052cc] rotate-45 border-r border-b border-white"></div>' : ''}
+      </div>
+    `,
+    iconSize: [32, 32],
+    iconAnchor: [16, 32]
+  });
 };
 
 const cityCoords = {
@@ -29,7 +68,7 @@ const cityCoords = {
 const districtsByCity = {
   "Hồ Chí Minh": ["Tất cả Quận/Huyện", "Quận 1", "Quận 3", "Quận 7", "Bình Thạnh", "Gò Vấp", "Thủ Đức", "Tân Bình"],
   "Hà Nội": ["Tất cả Quận/Huyện", "Cầu Giấy", "Đống Đa", "Hai Bà Trưng", "Thanh Xuân", "Hà Đông", "Nam Từ Liêm"],
-  "Đà Nẵng": ["Tất cả Quận/Huyện", "Hải Châu", "Thanh Khê", "Sơn Trà", "Ngũ Hành Sơn", "Liên Chiểu", "Cẩm Lệ", "Hòa Vang", "Điện Bàn", "Hội An", "Đại Lộc", "Duy Xuyên", "Thăng Bình", "Núi Thành", "Tam Kỳ"],
+  "Đà Nẵng": ["Tất cả Quận/Huyện", "Quận Hải Châu", "Quận Thanh Khê", "Quận Sơn Trà", "Quận Ngũ Hành Sơn", "Quận Liên Chiểu", "Quận Cẩm Lệ", "Huyện Hòa Vang", "Huyện Hoàng Sa"],
   "Quy Nhơn": ["Tất cả Quận/Huyện", "Ghềnh Ráng", "Nguyễn Văn Cừ", "Quang Trung", "Trần Phú"],
   "Cần Thơ": ["Tất cả Quận/Huyện", "Ninh Kiều", "Cái Răng", "Bình Thủy", "Ô Môn"]
 };
@@ -45,14 +84,14 @@ const SearchFilterPage = () => {
   const [filteredCenters, setFilteredCenters] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCenter, setSelectedCenter] = useState(null);
-  const [selectedCity, setSelectedCity] = useState(queryParams.get("city") || "Hồ Chí Minh");
+  const [selectedCity, setSelectedCity] = useState(queryParams.get("city") || "Đà Nẵng");
   const [selectedDistrict, setSelectedDistrict] = useState("Tất cả Quận/Huyện");
   const [searchQuery, setSearchQuery] = useState(queryParams.get("q") || "");
 
   useEffect(() => {
     const fetchCenters = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/centers");
+        const response = await axios.get("/api/centers");
         setAllCenters(response.data);
       } catch (err) {
         console.error("Error fetching centers:", err);
@@ -94,39 +133,13 @@ const SearchFilterPage = () => {
     currentPage * ITEMS_PER_PAGE
   );
 
-  const MapCenterHandler = ({ center }) => {
-    const map = useMap();
-    useEffect(() => {
-      if (center) {
-        map.setView([center.lat, center.lng], 14, { animate: true });
-      }
-    }, [center, map]);
-    return null;
-  };
-
-  const createPriceIcon = (center) => {
-    const isActive = selectedCenter?.id === center.id;
-    return L.divIcon({
-      className: 'custom-div-icon',
-      html: `
-        <div class="relative">
-          <div class="w-8 h-8 rounded-full shadow-xl flex items-center justify-center transition-all border-2 ${
-            isActive 
-            ? "bg-[#0052cc] text-white border-white scale-125 z-[2000]" 
-            : "bg-white text-[#0052cc] border-[#0052cc] hover:scale-110"
-          }">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-              <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-            </svg>
-          </div>
-          ${isActive ? '<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#0052cc] rotate-45 border-r border-b border-white"></div>' : ''}
-        </div>
-      `,
-      iconSize: [32, 32],
-      iconAnchor: [16, 32]
+  const centerIcons = React.useMemo(() => {
+    const icons = {};
+    filteredCenters.forEach(center => {
+      icons[center.id] = createPriceIcon(center, selectedCenter?.id === center.id);
     });
-  };
+    return icons;
+  }, [filteredCenters, selectedCenter?.id]);
 
   const handleCityChange = (city) => {
     setSelectedCity(city);
@@ -232,7 +245,6 @@ const SearchFilterPage = () => {
                   
                   <div className="flex justify-between items-end mt-2">
                     <div className="flex flex-col">
-                      <span className="text-primary font-black text-sm tracking-tighter">{center.price}<span className="text-[8px] font-medium text-gray-400 ml-0.5">/ khóa</span></span>
                     </div>
                     <button 
                       onClick={(e) => { e.stopPropagation(); navigate(`/center-detail?id=${center.id}`); }}
@@ -298,7 +310,7 @@ const SearchFilterPage = () => {
                   <Marker 
                     key={center.id}
                     position={[center.lat, center.lng]}
-                    icon={createPriceIcon(center)}
+                    icon={centerIcons[center.id]}
                     eventHandlers={{
                       click: () => setSelectedCenter(center),
                     }}
@@ -325,7 +337,6 @@ const SearchFilterPage = () => {
                               <span className="text-[9px] font-black text-[#191c1e]">{selectedCenter.rating}</span>
                             </div>
                           </div>
-                          <span className="text-primary font-black text-[10px] tracking-tighter shrink-0">{selectedCenter.price.split('.')[0]}tr</span>
                         </div>
                         <button 
                           onClick={() => navigate(`/center-detail?id=${selectedCenter.id}`)}

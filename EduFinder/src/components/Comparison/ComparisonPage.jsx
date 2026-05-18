@@ -9,14 +9,21 @@ import GuidanceCalloutSection from "./GuidanceCalloutSection";
 
 export const ComparisonPage = () => {
   const [allCenters, setAllCenters] = useState([]);
-  const [selectedIds, setSelectedIds] = useState([]);
+  const [selectedIds, setSelectedIds] = useState(() => {
+    const saved = localStorage.getItem("selectedComparisonIds");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [isPickerOpen, setIsPickerOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
+    localStorage.setItem("selectedComparisonIds", JSON.stringify(selectedIds));
+  }, [selectedIds]);
+
+  useEffect(() => {
     const fetchCenters = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/centers");
+        const response = await axios.get("/api/centers");
         setAllCenters(response.data);
       } catch (err) {
         console.error("Error fetching centers:", err);
@@ -27,21 +34,23 @@ export const ComparisonPage = () => {
 
   const toggleCenter = (id) => {
     setSelectedIds(prev => {
+      let updated;
       if (prev.includes(id)) {
-        return prev.filter(item => item !== id);
-      }
-      if (prev.length >= 3) {
+        updated = prev.filter(item => item !== id);
+      } else if (prev.length >= 3) {
         alert("Bạn chỉ có thể so sánh tối đa 3 trung tâm cùng lúc.");
         return prev;
+      } else {
+        updated = [...prev, id];
       }
-      return [...prev, id];
+      return updated;
     });
   };
 
   const selectedCenters = allCenters.filter(c => selectedIds.includes(c.id));
   const filteredCenters = allCenters.filter(c => 
-    c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    c.city.toLowerCase().includes(searchQuery.toLowerCase())
+    (c.name || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (c.city || "").toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (

@@ -23,32 +23,19 @@ export const ComparisonGridDisplaySection = ({ providers }) => {
                   <span className="absolute top-4 left-4 bg-secondary px-2.5 py-1 rounded-md text-[10px] font-black text-[#684300] uppercase shadow-lg">Nổi bật</span>
                 )}
               </div>
-              <div>
-                <h3 className="font-black text-[#191c1e] text-lg leading-tight group-hover:text-primary transition-colors">{provider.name}</h3>
-                <div className="flex items-center gap-2 mt-2">
-                  <Star size={18} className="text-yellow-500 fill-yellow-500" />
-                  <span className="text-base font-black text-[#191c1e]">{provider.rating}</span>
-                  <span className="text-xs text-gray-400 font-bold uppercase tracking-wider ml-1">/ 5.0</span>
-                </div>
+              <div className="min-h-[3.5rem] flex flex-col justify-center">
+                <h3 className="font-black text-[#191c1e] text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">{provider.name}</h3>
+              </div>
+              <div className="flex items-center gap-2 mt-2">
+                <Star size={18} className="text-yellow-500 fill-yellow-500" />
+                <span className="text-base font-black text-[#191c1e]">{provider.rating}</span>
+                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider ml-1">/ 5.0</span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Fee Row */}
-        <div className="flex border-b border-gray-50">
-          <div className="w-[200px] bg-gray-50/50 p-8 flex items-center">
-            <span className="font-bold text-gray-400 text-xs uppercase tracking-widest">Học phí TB</span>
-          </div>
-          {providers.map((provider) => (
-            <div key={provider.id} className={`flex-1 p-8 flex items-center ${provider.isFeatured ? "bg-primary/[0.02]" : ""}`}>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black text-primary tracking-tighter">{provider.price}</span>
-                <span className="text-[10px] text-gray-400 font-bold uppercase mt-1 tracking-widest opacity-60">Ước tính / Khóa</span>
-              </div>
-            </div>
-          ))}
-        </div>
+
 
         {/* Location Row */}
         <div className="flex border-b border-gray-50">
@@ -82,25 +69,24 @@ export const ComparisonGridDisplaySection = ({ providers }) => {
           ))}
         </div>
 
-        {/* Strengths Row (Mocked if missing) */}
+        {/* Strengths Row */}
         <div className="flex border-b border-gray-100">
           <div className="w-[200px] bg-gray-50/50 p-8 flex items-center">
             <span className="font-bold text-gray-400 text-xs uppercase tracking-widest">Cam kết & Ưu điểm</span>
           </div>
           {providers.map((provider) => (
             <div key={provider.id} className={`flex-1 p-8 flex flex-col gap-4 ${provider.isFeatured ? "bg-primary/[0.02]" : ""}`}>
-              <div className="flex items-start gap-3">
-                <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
-                <span className="text-xs text-gray-600 font-medium leading-relaxed">Đội ngũ giảng viên trình độ cao, giàu kinh nghiệm.</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
-                <span className="text-xs text-gray-600 font-medium leading-relaxed">Cơ sở vật chất hiện đại, tiêu chuẩn quốc tế.</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
-                <span className="text-xs text-gray-600 font-medium leading-relaxed">Lộ trình học cá nhân hóa cho từng học viên.</span>
-              </div>
+              {(provider.highlights && provider.highlights.length > 0) ? provider.highlights.map((highlight, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle size={16} className="text-green-500 shrink-0 mt-0.5" />
+                  <span className="text-xs text-gray-600 font-medium leading-relaxed">{highlight}</span>
+                </div>
+              )) : (
+                <div className="flex items-start gap-3 opacity-50">
+                   <CheckCircle size={16} className="text-gray-300 shrink-0 mt-0.5" />
+                   <span className="text-xs text-gray-400 font-medium italic">Đang cập nhật ưu điểm...</span>
+                </div>
+              )}
             </div>
           ))}
         </div>

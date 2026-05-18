@@ -1,0 +1,914 @@
+{
+  "centers": [
+    {
+      "id": 1,
+      "name": "British Council (Hội đồng Anh)",
+      "city": "Hồ Chí Minh",
+      "district": "Quận 1",
+      "address": "25 Lê Duẩn, Quận 1, TP. Hồ Chí Minh",
+      "lat": 10.7825,
+      "lng": 106.702,
+      "rating": 4.9,
+      "image": "",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true
+    },
+    {
+      "id": 2,
+      "name": "VUS - Anh Văn Hội Việt Mỹ",
+      "city": "Hồ Chí Minh",
+      "district": "Quận 3",
+      "address": "189 Nguyễn Thị Minh Khai, Quận 3, TP. Hồ Chí Minh",
+      "lat": 10.776,
+      "lng": 106.685,
+      "rating": 5.0,
+      "image": "",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Tiếng Anh trẻ em"
+      ],
+      "isFeatured": false
+    },
+    {
+      "id": 3,
+      "name": "ILA Vietnam - Hà Nội",
+      "city": "Hà Nội",
+      "district": "Cầu Giấy",
+      "address": "Quận Cầu Giấy, Hà Nội",
+      "lat": 21.028,
+      "lng": 105.852,
+      "rating": 4.8,
+      "image": "",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true
+    },
+
+    {
+      "id": 5,
+      "name": "Language Link - Quy Nhơn",
+      "city": "Quy Nhơn",
+      "district": "Trần Phú",
+      "address": "Tp. Quy Nhơn, Bình Định",
+      "lat": 13.775,
+      "lng": 109.225,
+      "rating": 4.5,
+      "image": "",
+      "tags": [
+        "Tiếng Anh",
+        "Luyện thi"
+      ],
+      "isFeatured": true
+    },
+    {
+      "id": 6,
+      "name": "Ocean Edu - Cần Thơ",
+      "city": "Cần Thơ",
+      "district": "Ninh Kiều",
+      "address": "Quận Ninh Kiều, Cần Thơ",
+      "lat": 10.035,
+      "lng": 105.785,
+      "rating": 4.7,
+      "image": "",
+      "tags": [
+        "IELTS",
+        "Giao tiếp",
+        "Tiếng Anh"
+      ],
+      "isFeatured": false
+    },
+
+
+
+    {
+      "id": 12,
+      "name": "IELTS Fighter - Chiến binh IELTS",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "103-105 Hàm Nghi, Q. Hải Châu, Đà Nẵng",
+      "phone": "0903 411 666",
+      "zaloLink": "https://zalo.me/1534908356573717113",
+      "googleMapsLink": "https://www.google.com/maps/place/IELTS+Fighter+%C4%90%C3%A0+N%E1%BA%B5ng/@16.06203,108.21102,15z/data=!4m8!3m7!1s0x314219ca892a6e99:0x8a6ece43418d4997!8m2!3d16.0620301!4d108.2110199!9m1!1b1!16s%2Fg%2F11f646c84m?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0620301,
+      "lng": 108.2110199,
+      "rating": 5.0,
+      "image": "https://talkclass.edu.vn/wp-content/uploads/2025/08/trung-tam-tieng-anh-IELTS-Fighter.jpg",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh mất gốc"
+      ],
+      "isFeatured": true,
+      "website": "https://khoahoc.ielts-fighter.com/",
+      "description": "IELTS Fighter là đối tác bạch kim của IDP và là đơn vị đào tạo IELTS hàng đầu Việt Nam hiện nay. Với khẩu hiệu 'IELTS Fighter - Chiến binh IELTS cho người Việt', trung tâm nỗ lực biến việc học chứng chỉ này trở nên đơn giản và dễ tiếp cận hơn cho mọi đối tượng.",
+      "stats": {
+        "students": "100.000+",
+        "teachers": "300+",
+        "courses": "8",
+        "established": "2016"
+      },
+      "highlights": [
+        "Phương pháp đào tạo RIPL độc quyền, giúp học viên tiếp thu kiến thức thông qua tính tương tác cao.",
+        "Đội ngũ giáo viên chuyên môn giỏi (8.0 - 8.5 IELTS) và giàu kỹ năng sư phạm.",
+        "Lộ trình học tinh gọn, tập trung trọng tâm vào các dạng đề thi thực tế.",
+        "Tặng kèm các lớp bổ trợ kỹ năng Speaking & Writing hàng tuần hoàn toàn miễn phí.",
+        "Cam kết đầu ra bằng văn bản cho từng học viên."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa IELTS (Mục tiêu 5.0 - 5.5+)",
+          "duration": "12 tuần",
+          "level": "Cơ bản",
+          "link": "https://khoahoc.ielts-fighter.com/muc-tieu-5-0-5-5"
+        },
+        {
+          "name": "Khóa IELTS (Mục tiêu 6.0 - 6.5+)",
+          "duration": "12 tuần",
+          "level": "Trung cấp",
+          "link": "https://khoahoc.ielts-fighter.com/muc-tieu-6-0-6-5"
+        },
+        {
+          "name": "Khóa IELTS Cấp tốc",
+          "duration": "8 tuần",
+          "level": "Nâng cao",
+          "link": "https://khoahoc.ielts-fighter.com/cap-toc"
+        }
+      ]
+    },
+
+    {
+      "id": 14,
+      "name": "IELTS Mentor - Đà Nẵng",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "75 Hoàng Diệu, Q. Hải Châu, Đà Nẵng",
+      "phone": "1900 4455",
+      "zaloLink": "https://zalo.me/ieltsmentor",
+      "googleMapsLink": "https://www.google.com/maps/place/IELTS+Mentor+%C4%90%C3%A0+N%E1%BA%B5ng/@16.064012,108.2099183,16z/data=!4m8!3m7!1s0x314219cdba002b35:0xc9b46bad7ab805cf!8m2!3d16.0640125!4d108.218673!9m1!1b1!16s%2Fg%2F11kpqypmdf?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0640125,
+      "lng": 108.218673,
+      "rating": 4.8,
+      "image": "https://wisdomagency.com/uploads/2022/11/Ielts-1024x576.png",
+      "tags": [
+        "IELTS",
+        "Giao tiếp cơ bản"
+      ],
+      "isFeatured": true,
+      "website": "https://ieltsmentor.edu.vn/",
+      "description": "IELTS Mentor là hệ thống đào tạo IELTS chuyên sâu với định hướng lấy học viên làm trung tâm, chú trọng vào việc truyền cảm hứng và xây dựng tư duy ngôn ngữ. Trung tâm nổi bật với mô hình lớp học ít người và sự theo sát chặt chẽ của đội ngũ Mentor (người hướng dẫn).",
+      "stats": {
+        "students": "15.000+",
+        "teachers": "100+",
+        "courses": "6",
+        "established": "2018"
+      },
+      "highlights": [
+        "Phương pháp L.I.B (Language - Interaction - Blended Learning) độc quyền.",
+        "Đội ngũ Mentor đạt 8.0+ IELTS, hỗ trợ tận tâm 24/7.",
+        "Lộ trình cá nhân hóa, khắc phục điểm yếu riêng biệt.",
+        "Cam kết đầu ra bằng văn bản, hỗ trợ học lại miễn phí.",
+        "Môi trường học tập hiện đại, kích thích sáng tạo."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa Basic IELTS",
+          "duration": "8 tuần",
+          "level": "Mất gốc",
+          "link": "https://ieltsmentor.edu.vn/khoa-hoc/basic-ielts"
+        },
+        {
+          "name": "Khóa Học IELTS (Mục tiêu 3.5 - 4.5+)",
+          "duration": "10 tuần",
+          "level": "Cơ bản",
+          "link": "https://ieltsmentor.edu.vn/khoa-hoc/ielts-3-5-4-5"
+        },
+        {
+          "name": "Khóa Học IELTS (Mục tiêu 6.5 - 7.5+)",
+          "duration": "12 tuần",
+          "level": "Nâng cao",
+          "link": "https://ieltsmentor.edu.vn/khoa-hoc/6-5-7-5-ielts"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "E-best English - Đà Nẵng",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "222 - 224 Đường 30/4, Q. Hải Châu, Đà Nẵng",
+      "phone": "0931 900 255",
+      "zaloLink": "https://zalo.me/0931900255",
+      "googleMapsLink": "https://www.google.com/maps/place/Trung+T%C3%A2m+Ti%E1%BA%BFng+Anh+EBest/@16.0520891,108.1846703,15z/data=!4m8!3m7!1s0x314219b899b7f36b:0x634ab2d3652e223c!8m2!3d16.040217!4d108.2144893!9m1!1b1!16s%2Fg%2F11c60j50hc?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.040217,
+      "lng": 108.2144893,
+      "rating": 5.0,
+      "image": "https://ebest.edu.vn/wp-content/uploads/2024/01/banner-1.webp",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Giao tiếp cho người đi làm"
+      ],
+      "isFeatured": true,
+      "website": "https://ebest.edu.vn/",
+      "description": "E-best English là một trong những trung tâm Anh ngữ uy tín tại Đà Nẵng, chuyên đào tạo giao tiếp và luyện thi chứng chỉ quốc tế. Trung tâm nổi tiếng với phương pháp dạy học gần gũi, thực tiễn và lộ trình học cá nhân hóa giúp học viên lấy lại nền tảng vững chắc.",
+      "stats": {
+        "students": "5.000+",
+        "teachers": "25+",
+        "courses": "6",
+        "established": "2014"
+      },
+      "highlights": [
+        "Phương pháp Phản xạ chủ động (Active Reflex) độc quyền.",
+        "Đội ngũ giáo viên chuyên môn cao, đạt chứng chỉ IELTS/TOEIC xuất sắc.",
+        "Dịch vụ chăm sóc học viên đặc biệt với đội ngũ Coach hỗ trợ kèm riêng.",
+        "Môi trường học tập năng động với các hoạt động ngoại khóa thực tế.",
+        "Sĩ số lớp học giới hạn và giáo trình biên soạn riêng biệt."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa tiếng Anh Giao tiếp Trung cấp",
+          "duration": "12 tuần",
+          "level": "Trung cấp",
+          "link": "https://ebest.edu.vn/khoa-hoc/giao-tiep-trung-cap/"
+        },
+        {
+          "name": "Khóa Học Tiếng Anh Giao Tiếp Nâng Cao",
+          "duration": "12 tuần",
+          "level": "Nâng cao",
+          "link": "https://ebest.edu.vn/khoa-hoc/khoa-hoc-tieng-anh-giao-tiep-nang-cao/"
+        },
+        {
+          "name": "Khóa tiếng Anh nền tảng lồng ghép TOEIC 4 kỹ năng",
+          "duration": "16 tuần",
+          "level": "Cơ bản",
+          "link": "https://ebest.edu.vn/khoa-hoc/khoa-tieng-anh-nen-tang-long-ghep-toeic-4-ky-nang/"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "DOL English - IELTS Đình Lực",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "87 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng",
+      "phone": "1800 96 96 39",
+      "zaloLink": "https://zalo.me/3524453634164038405",
+      "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+luy%E1%BB%87n+thi+IELTS+DOL+%C4%90%C3%ACnh+L%E1%BB%B1c+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0606208,108.2192635,17z/data=!3m1!4b1!4m6!3m5!1s0x3142197654c11507:0xdc908328a898cf76!8m2!3d16.0606208!4d108.2192635!16s%2Fg%2F11txtf94fn?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0606208,
+      "lng": 108.2192635,
+      "rating": 5.0,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR4W5Z28IRjPuDlXpNVMjySjOGyS-WnnF9pw&s",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true,
+      "website": "https://www.dolenglish.vn/",
+      "description": "DOL English là học viện đào tạo IELTS hàng đầu Việt Nam, nổi tiếng với phương pháp Linearthinking độc quyền giúp học viên học tiếng Anh bằng tư duy logic thay vì học vẹt. Trung tâm được đánh giá cao nhờ hệ thống Smart Learning ứng dụng công nghệ hiện đại vào quản lý và giảng dạy.",
+      "stats": {
+        "students": "20.000+",
+        "teachers": "100+",
+        "courses": "10",
+        "established": "2017"
+      },
+      "highlights": [
+        "Phương pháp Linearthinking (Tư duy tuyến tính) độc quyền tối ưu hóa thời gian học.",
+        "Hệ thống Smart System tích hợp AI hỗ trợ chấm sửa bài chi tiết.",
+        "Đội ngũ giáo viên chuyên môn xuất sắc (8.5 - 9.0 IELTS).",
+        "Lộ trình học cá nhân hóa, tinh gọn, tập trung bản chất ngôn ngữ.",
+        "Cơ sở vật chất hiện đại, tối ưu cho trải nghiệm học thông minh."
+      ],
+      "featuredCourses": [
+        {
+          "name": "IELTS Cơ Bản",
+          "duration": "10 tuần",
+          "level": "Cơ bản",
+          "link": "https://www.dolenglish.vn/course-landing/ielts-co-ban"
+        },
+        {
+          "name": "IELTS Nâng Cao",
+          "duration": "12 tuần",
+          "level": "Nâng cao",
+          "link": "https://www.dolenglish.vn/course-landing/ielts-nang-cao"
+        },
+        {
+          "name": "IELTS Cấp Tốc",
+          "duration": "8 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://www.dolenglish.vn/course-landing/ielts-cap-toc"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Anh Ngữ Aten (Aten English)",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "272 Phan Châu Trinh, Q. Hải Châu, Đà Nẵng",
+      "phone": "0905 771 900",
+      "zaloLink": "https://zalo.me/0866602637",
+      "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+Aten+%C4%90%C3%A0+N%E1%BA%B5ng+-+Ti%E1%BA%BFng+Anh+Giao+Ti%E1%BA%BFp/@16.0587321,108.2163993,17z/data=!4m8!3m7!1s0x314219b6596e67f7:0xf6f458e20884961f!8m2!3d16.0587321!4d108.2189742!9m1!1b1!16s%2Fg%2F11fnwht3r_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0587321,
+      "lng": 108.2189742,
+      "rating": 5.0,
+      "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJh-w8x6rZCtLlanKYKQAZjaMAxMYWWK7-keBa11AWDs_wkz12",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Tiếng Anh mất gốc"
+      ],
+      "isFeatured": true,
+      "website": "https://aten.edu.vn/",
+      "description": "Aten English là hệ thống trường học chỉ chuyên đào tạo Tiếng Anh Giao tiếp tại Việt Nam. Với triết lý 'Học một lần, dùng cả đời', Aten tập trung giúp học viên lấy lại nền tảng vững chắc và khả năng phản xạ tự nhiên trong thời gian ngắn nhất.",
+      "stats": {
+        "students": "100.000+",
+        "teachers": "50+",
+        "courses": "4",
+        "established": "2012"
+      },
+      "highlights": [
+        "Mô hình '3 kèm 1' độc quyền (Giảng viên, Trợ giảng và Chăm sóc học viên).",
+        "Phương pháp Phản xạ 3 giác quan (Hình ảnh - Âm thanh - Vận động).",
+        "Cam kết đầu ra bằng văn bản và đặc quyền 'Thẻ bảo hành trọn đời'.",
+        "Lộ trình học cá nhân hóa được thiết kế riêng cho người mất gốc.",
+        "Môi trường học tập thân thiện, tạo động lực thực hành tự nhiên."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa học tiếng Anh Giao tiếp trọn đời",
+          "duration": "6 tháng",
+          "level": "Mọi trình độ",
+          "link": "https://aten.edu.vn/khoa-hoc/khoa-hoc-anh-giao-tiep-tron-doi/"
+        },
+        {
+          "name": "Khóa học Phát âm tiếng Anh chuẩn",
+          "duration": "2 tháng",
+          "level": "Cơ bản",
+          "link": "https://aten.edu.vn/khoa-hoc/khoa-hoc-phat-am-tieng-anh-chuan/"
+        },
+        {
+          "name": "Khóa Tiếng Anh cho doanh nghiệp",
+          "duration": "Linh hoạt",
+          "level": "Nâng cao",
+          "link": "https://aten.edu.vn/tieng-anh-cho-doanh-nghiep/"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Hệ thống Anh ngữ RES (Reliable English School)",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "140 Trưng Nữ Vương, Q. Hải Châu, Đà Nẵng",
+      "phone": "097 904 3610",
+      "zaloLink": "https://zalo.me/0979043610",
+      "googleMapsLink": "https://www.google.com/maps/place/Trung+T%C3%A2m+Luy%E1%BB%87n+Thi+Ielts+-+Res+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0580743,108.2206854,17z/data=!4m8!3m7!1s0x314219738979cb8d:0xf2100af74b9434f1!8m2!3d16.0580743!4d108.2206854!9m1!1b1!16s%2Fg%2F11qmc0dtqk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0580743,
+      "lng": 108.2206854,
+      "rating": 4.3,
+      "image": "https://res.edu.vn/wp-content/uploads/2021/11/cover-cac-khoa-hoc-tai-res-1400x533.jpg",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh trẻ em",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true,
+      "website": "https://res.edu.vn/",
+      "description": "RES là hệ thống trường Anh ngữ tiêu chuẩn quốc tế với thế mạnh vượt trội về đào tạo IELTS và tiếng Anh trẻ em chất lượng cao. Nhiều năm liền, RES giữ vững vị thế là đối tác xuất sắc nhất, là đơn vị có số lượng học viên thi IELTS đông nhất của Hội đồng Anh (British Council) tại Việt Nam.",
+      "stats": {
+        "students": "50.000+",
+        "teachers": "150+",
+        "courses": "12",
+        "established": "2007"
+      },
+      "highlights": [
+        "Đội ngũ giáo viên bản xứ chiếm đa số, có trình độ cao và là chuyên gia/giám khảo IELTS.",
+        "Lộ trình học toàn diện với chương trình Luyện thi IELTS Cấp tốc hiệu quả.",
+        "Cam kết đầu ra bằng văn bản, hỗ trợ học lại miễn phí nếu không đạt mục tiêu.",
+        "Giáo trình biên soạn chuyên sâu, cập nhật liên tục theo xu hướng đề thi thực tế.",
+        "Sở hữu số lượng học viên đạt điểm cao (7.0 - 8.5+ IELTS) thuộc top đầu cả nước."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa học Tiếng Anh Giao tiếp",
+          "duration": "12 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://res.edu.vn/tieng-anh-giao-tiep-2/"
+        },
+        {
+          "name": "Luyện thi IELTS 1 kèm 1 cùng giám khảo",
+          "duration": "Linh hoạt",
+          "level": "Cá nhân hóa",
+          "link": "https://res.edu.vn/khoa-hoc-luyen-thi-ielts-1-kem-1/"
+        },
+        {
+          "name": "IELTS Cấp tốc cam kết (6.5 – 8.0)",
+          "duration": "8-12 tuần",
+          "level": "Nâng cao",
+          "link": "https://res.edu.vn/khoa-hoc-ielts-cap-toc-cam-ket-diem/"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Trung tâm Anh ngữ AMES ENGLISH Đà Nẵng",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "24 Lê Thánh Tôn, Q. Hải Châu, Đà Nẵng",
+      "phone": "1800 2098",
+      "zaloLink": "https://zalo.me/s/106038577634250901/",
+      "googleMapsLink": "https://www.google.com/maps/place/Anh+ng%E1%BB%AF+AMES+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0738831,108.2163057,17z/data=!4m8!3m7!1s0x31421833d5b503cd:0xa01308081daa9e49!8m2!3d16.0738831!4d108.2188806!9m1!1b1!16s%2Fg%2F11b6d4z8xr?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0738831,
+      "lng": 108.2188806,
+      "rating": 4.7,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnmIF-3iYH4HJtYfP8YWYf1lC9unAaK4gaw&s",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh trẻ em",
+        "Giao tiếp cho người đi làm"
+      ],
+      "isFeatured": true,
+      "website": "https://ames.edu.vn/",
+      "description": "AMES English là hệ thống đào tạo Anh ngữ chuẩn quốc tế hàng đầu tại Việt Nam, tiên phong ứng dụng công nghệ trí tuệ nhân tạo vào giảng dạy. Với mô hình học tập hiện đại, AMES giúp học viên chủ động phát triển toàn diện cả kiến thức học thuật lẫn khả năng ứng dụng ngôn ngữ vào thực tế cuộc sống.",
+      "stats": {
+        "students": "6.000+ (Tại khu vực Đà Nẵng)",
+        "teachers": "40+",
+        "courses": "15",
+        "established": "2003 (Hệ thống AMA Việt Nam)"
+      },
+      "highlights": [
+        "Phương pháp Active English (Học chủ động) độc quyền, linh hoạt thời gian.",
+        "Luyện tập cùng ứng dụng MyAI chỉnh sửa phát âm chuẩn Mỹ 24/7.",
+        "Đội ngũ giáo viên 100% có bằng cấp quốc tế (TESOL, CELTA).",
+        "Giáo trình chuẩn quốc tế, lộ trình tinh gọn, tập trung trọng tâm đề thi.",
+        "Cam kết đạt điểm số đầu ra bằng văn bản cho IELTS, TOEIC, TOEFL."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Tiếng Anh Doanh nghiệp",
+          "duration": "Linh hoạt",
+          "level": "Chuyên nghiệp",
+          "link": "https://ames.edu.vn/chuong-trinh/tieng-anh-doanh-nghiep"
+        },
+        {
+          "name": "Trại hè IELTS - CAMP",
+          "duration": "4-8 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://ames.edu.vn/chuong-trinh/ielts-camp"
+        },
+        {
+          "name": "Tiếng Anh luyện thi IELTS đảm bảo đầu ra",
+          "duration": "12-24 tuần",
+          "level": "Cam kết đầu ra",
+          "link": "https://ames.edu.vn/chuong-trinh/luyen-thi-ielts-dam-bao-dau-ra"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Anh ngữ MB",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "23 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng",
+      "phone": "090 111 43 43",
+      "zaloLink": "https://zalo.me/0901114343",
+      "googleMapsLink": "https://www.google.com/maps/place/TT+Anh+Ng%E1%BB%AF+MB+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0607409,108.221372,17z/data=!4m8!3m7!1s0x3142193441e9ea5f:0xa0f2eaa3f9cb877f!8m2!3d16.0607409!4d108.221372!9m1!1b1!16s%2Fg%2F11tgd9962j?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0607409,
+      "lng": 108.221372,
+      "rating": 4.9,
+      "image": "https://studentjob.donga.edu.vn/Content/images/doanhnghiep/i1684746644.png",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Tiếng Anh mất gốc"
+      ],
+      "isFeatured": true,
+      "website": "https://anhngumb.com/",
+      "description": "Anh ngữ MB (được sáng lập bởi thầy Biển) là địa chỉ chuyên sâu về đào tạo tiếng Anh giao tiếp và luyện thi chứng chỉ TOEIC, IELTS thực dụng tại Đà Nẵng. Với triết lý dạy thật - học thật, trung tâm giúp nhiều thế hệ sinh viên và người đi làm bứt phá điểm số và tự tin sử dụng ngôn ngữ.",
+      "stats": {
+        "students": "3.000+",
+        "teachers": "15+",
+        "courses": "5",
+        "established": "2015"
+      },
+      "highlights": [
+        "Phương pháp giảng dạy 3S (Simple - Smart - Speed) độc quyền.",
+        "Quy mô lớp học giới hạn, tăng tối đa thời gian tương tác trực tiếp.",
+        "Đội ngũ giáo viên chuyên môn cao, theo sát tiến độ và sửa lỗi chi tiết.",
+        "Học phí hợp lý, nhiều chính sách hỗ trợ cho học sinh, sinh viên.",
+        "Không khí lớp học năng động, truyền cảm hứng, không áp lực."
+      ],
+      "featuredCourses": [
+        {
+          "name": "LUYỆN THI TOEIC",
+          "duration": "12 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://anhngumb.com/product-category/toeic/"
+        },
+        {
+          "name": "TIẾNG ANH GIAO TIẾP",
+          "duration": "12 tuần",
+          "level": "Giao tiếp",
+          "link": "https://anhngumb.com/product-category/tieng-anh-giao-tiep/"
+        },
+        {
+          "name": "VSTEP",
+          "duration": "8 tuần",
+          "level": "Chứng chỉ B1, B2, C1",
+          "link": "https://anhngumb.com/product-category/vstep/"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Ms Hoa TOEIC",
+      "city": "Đà Nẵng",
+      "district": "Quận Thanh Khê",
+      "address": "233 Nguyễn Văn Linh, Q. Thanh Khê, Đà Nẵng",
+      "phone": "0934 489 666",
+      "zaloLink": "https://zalo.me/mshoatoeic",
+      "googleMapsLink": "https://www.google.com/maps/place/Ms+Hoa+TOEIC+%7C+Trung+t%C3%A2m+Anh+ng%E1%BB%AF+Ms+Hoa,+Thanh+Kh%C3%AA,+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0600537,108.2118988,16.48z/data=!4m8!3m7!1s0x3142197c9aeec701:0x550358e9561a6f0f!8m2!3d16.0600014!4d108.2129628!9m1!1b1!16s%2Fg%2F11g0j4w60f?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0600014,
+      "lng": 108.2129628,
+      "rating": 5.0,
+      "image": "https://ebest.edu.vn/wp-content/uploads/2023/12/Ms-Hoa-1024x355.jpg",
+      "tags": [
+        "Giao tiếp cho người đi làm",
+        "Giao tiếp cơ bản"
+      ],
+      "isFeatured": true,
+      "website": "https://www.anhngumshoa.com/",
+      "description": "Ms Hoa TOEIC là thương hiệu đào tạo TOEIC hàng đầu tại Việt Nam hiện nay, thuộc sở hữu của công ty IMAP. Với slogan \"Sứ giả truyền cảm hứng\", trung tâm không chỉ dạy kiến thức mà còn tập trung khơi dậy niềm đam mê và tình yêu tiếng Anh trong mỗi học viên.",
+      "stats": {
+        "students": "150.000+ (Toàn hệ thống)",
+        "teachers": "200+",
+        "courses": "6",
+        "established": "2012"
+      },
+      "highlights": [
+        "Phương pháp đào tạo RIPL độc quyền, giúp chắt lọc kiến thức tinh gọn.",
+        "Đội ngũ giảng viên có chuyên môn cao, năng động và giàu năng lượng.",
+        "Giáo trình biên soạn chuyên sâu, bám sát cấu trúc đề thi TOEIC thật.",
+        "Hệ thống sinh thái học tập online và lớp bổ trợ miễn phí phong phú.",
+        "Cam kết đầu ra bằng văn bản, hỗ trợ học lại miễn phí nếu không đạt."
+      ],
+      "featuredCourses": [
+        {
+          "name": "TOEIC 2 kỹ năng (Nghe - Đọc)",
+          "duration": "12-24 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://www.anhngumshoa.com/khoa-hoc-2-ky-nang.html"
+        },
+        {
+          "name": "Luyện thi TOEIC cấp tốc 1 thầy 1 trò",
+          "duration": "Linh hoạt",
+          "level": "Cấp tốc",
+          "link": "https://www.anhngumshoa.com/tin-tuc/khoa-luyen-thi-toeic-cap-toc-1-thay-1-tro-38058.html"
+        },
+        {
+          "name": "Khóa Học Tiếng Anh Doanh nghiệp",
+          "duration": "Linh hoạt",
+          "level": "Chuyên nghiệp",
+          "link": "https://www.anhngumshoa.com/khoa-hoc-tieng-anh-doanh-nghiep.html"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "IRIS English Center (Hệ thống Anh ngữ IRIS)",
+      "city": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "address": "55 Thái Phiên, P. Phước Ninh, Q. Hải Châu, Đà Nẵng",
+      "phone": "0236 656 6688",
+      "zaloLink": "https://zalo.me/2909678947908720965",
+      "googleMapsLink": "https://www.google.com/maps/place/TT+Anh+Ng%E1%BB%AF+MB+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0607409,108.221372,17z/data=!4m8!3m7!1s0x3142193441e9ea5f:0xa0f2eaa3f9cb877f!8m2!3d16.0607409!4d108.221372!9m1!1b1!16s%2Fg%2F11tgd9962j?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0607409,
+      "lng": 108.221372,
+      "rating": 4.9,
+      "image": "https://iris.edu.vn/wp-content/uploads/2025/08/iris-speak-yourself-1.jpg",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Tiếng Anh mất gốc"
+      ],
+      "isFeatured": true,
+      "website": "https://iris.edu.vn/",
+      "description": "IRIS English Center là một trong những trung tâm hàng đầu tại Đà Nẵng chuyên giải quyết tình trạng mất gốc tiếng Anh và đào tạo giao tiếp thực tế. Với hệ sinh thái học tập toàn diện, IRIS giúp học viên phá bỏ rào cản tự ti để tự tin nói tiếng Anh một cách tự nhiên nhất.",
+      "stats": {
+        "students": "10.000+",
+        "teachers": "35+",
+        "courses": "5",
+        "established": "2014"
+      },
+      "highlights": [
+        "Phương pháp Lazy English độc quyền, giúp tiếp thu tiếng Anh tự động.",
+        "Đội ngũ \"Care-buddy\" theo sát hỗ trợ, giải đáp thắc mắc 24/7.",
+        "Tổ chức các buổi trải nghiệm thực tế \"Săn Tây\" định kỳ tại Đà Nẵng.",
+        "Môi trường lớp học năng động, áp dụng quy tắc thực hành nói liên tục.",
+        "Cam kết bảo hành kết quả đầu ra bằng văn bản pháp lý."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Tiếng Anh cho trẻ mầm non (4 – 5 tuổi)",
+          "duration": "24 tuần",
+          "level": "Mầm non",
+          "link": "https://iris.edu.vn/khoa-hoc-tieng-anh-mam-non/"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "WISE English",
+      "city": "Đà Nẵng",
+      "district": "Quận Thanh Khê",
+      "address": "146 Hàm Nghi, Q. Thanh Khê, Đà Nẵng",
+      "phone": "0901270888",
+      "zaloLink": "https://zalo.me/4272304789661557880",
+      "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BA%BFng+Anh+WISE+ENGLISH/@16.060676,108.210878,17z/data=!4m16!1m9!3m8!1s0x31421760b4df3df7:0xcd115cd3801dcb5a!2sTrung+t%C3%A2m+ti%E1%BA%BFng+Anh+WISE+ENGLISH!8m2!3d16.060676!4d108.210878!9m1!1b1!16s%2Fg%2F11c6lwzch7!3m5!1s0x31421760b4df3df7:0xcd115cd3801dcb5a!8m2!3d16.060676!4d108.210878!16s%2Fg%2F11c6lwzch7?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.060676,
+      "lng": 108.210878,
+      "rating": 4.7,
+      "image": "https://wiseenglish.edu.vn/wp-content/uploads/2025/02/khai-truong-nlp-5.jpg",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true,
+      "website": "https://wiseenglish.edu.vn/",
+      "description": "WISE English là đơn vị tiên phong áp dụng phương pháp học tiếng Anh dựa trên nền tảng NLP (Ngôn ngữ lập trình tư duy) và Ngôn ngữ học. Với lộ trình học thông minh, trung tâm giúp học viên rút ngắn đến 80% thời gian học mà vẫn đạt hiệu quả tối ưu.",
+      "stats": {
+        "students": "10.000+",
+        "teachers": "50+",
+        "courses": "12",
+        "established": "2018"
+      },
+      "highlights": [
+        "Phương pháp học từ vựng 6 bước và Nghe tự động dựa trên NLP.",
+        "Đội ngũ giảng viên chuyên môn cao, 100% sở hữu chứng chỉ quốc tế.",
+        "Giáo trình biên soạn chuyên sâu bám sát chuẩn Cambridge và Oxford.",
+        "Môi trường học tập năng động, tối ưu hóa tư duy não bộ.",
+        "Hợp đồng cam kết đầu ra bằng văn bản, hỗ trợ học lại miễn phí."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Khóa Học IELTS",
+          "duration": "12-24 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://wiseenglish.edu.vn/khoa-hoc/ielts"
+        },
+        {
+          "name": "Khóa Học TOEIC",
+          "duration": "12-16 tuần",
+          "level": "Luyện thi",
+          "link": "https://wiseenglish.edu.vn/khoa-hoc/luyen-thi-toeic"
+        },
+        {
+          "name": "Khóa Học Tiếng Anh Doanh Nghiệp",
+          "duration": "Linh hoạt",
+          "level": "Chuyên nghiệp",
+          "link": "https://wiseenglish.edu.vn/khoa-hoc/tieng-anh-doanh-nghiep"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Emma English School",
+      "city": "Đà Nẵng",
+      "district": "Quận Thanh Khê",
+      "address": "397 Điện Biên Phủ, Q. Thanh Khê, Đà Nẵng",
+      "phone": "0973407555",
+      "zaloLink": "https://zalo.me/0834284394",
+      "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+Anh+ng%E1%BB%AF+EMMA+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0655961,108.1711465,15z/data=!4m8!3m7!1s0x3142190195b1105f:0x5a6e0a9bb8b888cb!8m2!3d16.0656543!4d108.1892577!9m1!1b1!16s%2Fg%2F11h7s4k5zj?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0656543,
+      "lng": 108.1892577,
+      "rating": 5.0,
+      "image": "https://scontent.fdad3-8.fna.fbcdn.net/v/t39.30808-6/476600569_1159679309500534_7358844277145892921_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Z8ROUgc1QFoQ7kNvwEFG9Nr&_nc_oc=AdoJfHZ8pbuRuMPr3bMtbPVIA3uxX6zyMKOvZvLEo8fkqX23qWj2fOai5GW-de2MZZ0&_nc_zt=23&_nc_ht=scontent.fdad3-8.fna&_nc_gid=fO5cMODG17vHhZj49ehOFQ&_nc_ss=7f2a8&oh=00_Af4mHLnYcDzGvP27694FS_sZ41wqQ6SYLkvVxyxxlflPCQ&oe=6A0E50A8",
+      "tags": [
+        "Giao tiếp cơ bản",
+        "Tiếng Anh mất gốc"
+      ],
+      "isFeatured": true,
+      "website": "https://emmaenglishschool.com/",
+      "description": "Emma English School là mô hình trường học tiếng Anh tinh gọn, tập trung vào cá nhân hóa trải nghiệm học tập cho từng học viên tại Đà Nẵng. Trung tâm nổi bật với phương pháp dạy học thực dụng, giúp học viên không chỉ thi đạt chứng chỉ mà còn có thể sử dụng tiếng Anh tự tin trong đời sống.",
+      "stats": {
+        "students": "2.500+",
+        "teachers": "12+",
+        "courses": "5",
+        "established": "2016"
+      },
+      "highlights": [
+        "Khóa học giao tiếp Bootcamp độc quyền, học đi đôi với hành.",
+        "Sĩ số lớp học cực thấp (dưới 5 học viên), tăng tối đa tương tác.",
+        "Đội ngũ giảng viên tận tâm, chuyên môn cao (Master of TESOL, TEFL).",
+        "Chính sách cam kết chất lượng bằng văn bản giúp học viên tự tin.",
+        "Lộ trình học linh hoạt kết hợp nhiều hoạt động ngoại khóa bổ ích."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Học TOEIC Từ Con Số 0",
+          "duration": "16 tuần",
+          "level": "Cơ bản",
+          "link": "https://emmaenglishschool.com/hoc-toeci-tu-con-so-0.html"
+        },
+        {
+          "name": "Lộ trình học TOEIC từ 0 đến 650",
+          "duration": "24 tuần",
+          "level": "Bắt đầu",
+          "link": "https://emmaenglishschool.com/lo-trinh-hoc-toeic-tu-0-den-650-danh-cho-nguoi-bat-dau.html"
+        },
+        {
+          "name": "Bí Quyết Đạt Band 7.0+ IELTS",
+          "duration": "12 tuần",
+          "level": "Nâng cao",
+          "link": "https://emmaenglishschool.com/bi-quyet-dat-band-7-0-ielts.html"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Anh Ngữ ZIM (ZIM Academy)",
+      "city": "Đà Nẵng",
+      "district": "Quận Thanh Khê",
+      "address": "245 Nguyễn Văn Linh, Q.Thanh Khê, Đà Nẵng",
+      "phone": "1900 2833",
+      "zaloLink": "https://zalo.me/2397693668955152562",
+      "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+ZIM/@16.0599636,108.2078482,17z/data=!4m8!3m7!1s0x31421956ec373703:0xa0f4a43074863054!8m2!3d16.0599637!4d108.2127191!9m1!1b1!16s%2Fg%2F11jzqs6_q1?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0599637,
+      "lng": 108.2127191,
+      "rating": 4.9,
+      "image": "https://data.vieclamdanang.vn/vieclamdanang/2024/1/26/he-thong-anh-ngu-zim-zim-academy-1-638418624225691671.jpg",
+      "tags": [
+        "IELTS",
+        "Tiếng Anh học thuật"
+      ],
+      "isFeatured": true,
+      "website": "https://zim.vn/",
+      "description": "ZIM Academy là hệ thống trường đào tạo tiếng Anh và luyện thi chứng chỉ quốc tế uy tín, nổi tiếng with phương pháp Cá nhân hóa học tập dựa trên nền tảng dữ liệu lớn. Trung tâm cam kết giúp học viên đạt mục tiêu cam kết bằng hệ thống giáo trình bài bản và phương pháp tư duy ngôn ngữ tối ưu.",
+      "stats": {
+        "students": "30.000+ (Toàn hệ thống)",
+        "teachers": "150+",
+        "courses": "8 (Tập trung IELTS, TOEIC, VSTEP)",
+        "established": "2016"
+      },
+      "highlights": [
+        "Hệ thống Quản trị Học tập cá nhân hóa (PLS) tối ưu thời gian.",
+        "Phương pháp tư duy logic độc quyền, hiểu rõ bản chất ngôn ngữ.",
+        "Đội ngũ giảng viên cơ hữu chuyên môn cao (IELTS 8.0 - 8.5+).",
+        "Hệ thống thi thử mô phỏng 100% áp lực thi thật, chấm chữa chi tiết.",
+        "Cam kết đầu ra bằng hợp đồng văn bản pháp lý, hỗ trợ thi lại."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Luyện thi IELTS",
+          "duration": "12-24 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://zim.vn/ielts"
+        },
+        {
+          "name": "Luyện thi TOEIC",
+          "duration": "12 tuần",
+          "level": "Luyện thi",
+          "link": "https://zim.vn/toeic"
+        },
+        {
+          "name": "Luyện thi SAT",
+          "duration": "12-16 tuần",
+          "level": "Học thuật",
+          "link": "https://zim.vn/luyen-thi-sat"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Tổ chức Giáo dục MAI (MAI Education)",
+      "city": "Đà Nẵng",
+      "district": "Quận Thanh Khê",
+      "address": "33 Phạm Nhữ Tăng, Q. Thanh Khê, Đà Nẵng",
+      "phone": "0796654916",
+      "zaloLink": "https://zalo.me/0963.961.916",
+      "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+C%C3%B4+Mai/@16.0647372,108.1860978,17z/data=!4m8!3m7!1s0x69abd4632c4e6be9:0xa50f0395bc02e678!8m2!3d16.0647372!4d108.1886727!9m1!1b1!16s%2Fg%2F11ts0hb4m6?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "lat": 16.0647372,
+      "lng": 108.1886727,
+      "rating": 4.9,
+      "image": "https://scontent.fdad3-8.fna.fbcdn.net/v/t39.30808-6/486943881_1087842316720518_5598618828728948606_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lnIS8lxXMIEQ7kNvwHRRG5G&_nc_oc=Adr5ImFuBvhgJwXM5kXrR20lb5YS7qdVNkpLaKYhl4Q82h6ShBbPneDJIWluCNsbt2k&_nc_zt=23&_nc_ht=scontent.fdad3-8.fna&_nc_gid=wFyH9px3c7M3-bKx5DqGrg&_nc_ss=7f2a8&oh=00_Af5ZmmqjldBJyZurFUG-Q6bTHzmpIeV_gbOWxea1aGNtMQ&oe=6A0E484E",
+      "tags": [
+        "Tiếng Anh mất gốc",
+        "Giao tiếp cơ bản"
+      ],
+      "isFeatured": true,
+      "website": "https://maienglish.edu.vn/",
+      "description": "Tổ chức Giáo dục MAI là đơn vị đào tạo tiếng Anh uy tín tại Đà Nẵng, nổi bật with các chương trình xóa mất gốc và luyện thi chứng chỉ quốc tế cấp tốc. Với phương châm học tập thực chất, MAI Education giúp học viên xây dựng lại nền tảng vững chắc và tự tin sử dụng tiếng Anh trong môi trường học thuật lẫn công việc.",
+      "stats": {
+        "students": "3.000+",
+        "teachers": "15+",
+        "courses": "6",
+        "established": "2019"
+      },
+      "highlights": [
+        "Lộ trình học tinh gọn, tập trung trọng tâm đạt mục tiêu.",
+        "Đội ngũ giảng viên chuyên môn cao (IELTS 7.5 - 8.5).",
+        "Mô hình lớp học tương tác cao, phản xạ liên tục tại lớp.",
+        "Hệ thống kiểm tra định kỳ nghiêm ngặt điều chỉnh lộ trình.",
+        "Cam kết chất lượng đầu ra rõ ràng, hỗ trợ tối đa."
+      ],
+      "featuredCourses": [
+        {
+          "name": "Luyện thi IETLS",
+          "duration": "12-16 tuần",
+          "level": "Mọi trình độ",
+          "link": "https://maienglish.edu.vn/ielts-dream/"
+        },
+        {
+          "name": "Luyện thi TOEIC",
+          "duration": "12 tuần",
+          "level": "Luyện thi",
+          "link": "https://maienglish.edu.vn/toeic-dream/"
+        },
+        {
+          "name": "Giao Tiếp Nâng Cao",
+          "duration": "12 tuần",
+          "level": "Nâng cao",
+          "link": "https://maienglish.edu.vn/intermediate/"
+        }
+      ]
+    },
+    {
+      "lat": 10.012,
+      "lng": 105.805,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop",
+      "tags": [
+        "Tiếng Trung",
+        "Cơ bản"
+      ],
+      "isFeatured": false
+    },
+    {
+      "id": 18,
+      "name": "E-Space - Tiếng Anh Trực Tuyến",
+      "city": "Hà Nội",
+      "district": "Thanh Xuân",
+      "address": "Nguyễn Trãi, Thanh Xuân, Hà Nội",
+      "lat": 20.998,
+      "lng": 105.812,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=500&auto=format&fit=crop",
+      "tags": [
+        "Tiếng Anh",
+        "Online 1-1",
+        "Tiết kiệm"
+      ],
+      "isFeatured": false
+    },
+    {
+      "id": 20,
+      "name": "Zhongwen Center - Tân Bình",
+      "city": "Hồ Chí Minh",
+      "district": "Tân Bình",
+      "address": "Hoàng Văn Thụ, Tân Bình, TP. Hồ Chí Minh",
+      "lat": 10.798,
+      "lng": 106.662,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=500&auto=format&fit=crop",
+      "tags": [
+        "Tiếng Trung",
+        "HSK 4-5"
+      ],
+      "isFeatured": false
+    }
+  ],
+  "users": [
+    {
+      "id": "DS190161",
+      "username": "DS190161",
+      "password": "123456",
+      "fullName": "Sinh viên DS190161"
+    },
+    {
+      "id": "DS190140",
+      "username": "DS190140",
+      "password": "123456",
+      "fullName": "Sinh viên DS190140"
+    },
+    {
+      "id": "DS190267",
+      "username": "DS190267",
+      "password": "123456",
+      "fullName": "Sinh viên DS190267"
+    },
+    {
+      "id": "DS190163",
+      "username": "DS190163",
+      "password": "123456",
+      "fullName": "Sinh viên DS190163"
+    },
+    {
+      "id": "HE186875",
+      "username": "HE186875",
+      "password": "123456",
+      "fullName": "Sinh viên HE186875"
+    }
+  ],
+  "reviews": [],
+  "registrations": []
+}

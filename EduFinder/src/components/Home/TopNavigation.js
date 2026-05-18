@@ -5,8 +5,6 @@ import { Bell, User, ChevronDown } from "lucide-react";
 const navItems = [
   { label: "Khám phá", href: "/explore" },
   { label: "So sánh", href: "/compare" },
-  { label: "Lịch học", href: "/schedule" },
-  { label: "Hỗ trợ", href: "/support" },
 ];
 
 const TopNavigation = () => {

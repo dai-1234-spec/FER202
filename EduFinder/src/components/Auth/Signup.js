@@ -39,7 +39,7 @@ const Signup = () => {
 
     try {
       // Check if user already exists
-      const checkResponse = await axios.get(`http://localhost:3001/users`);
+      const checkResponse = await axios.get(`/api/users`);
       const users = checkResponse.data;
       const userExists = users.some(u => u.username.toLowerCase() === formData.username.toLowerCase());
 
@@ -57,7 +57,7 @@ const Signup = () => {
         fullName: formData.fullName,
       };
 
-      await axios.post("http://localhost:3001/users", newUser);
+      await axios.post("/api/users", newUser);
       Swal.fire({
         icon: 'success',
         title: 'Đăng ký thành công',

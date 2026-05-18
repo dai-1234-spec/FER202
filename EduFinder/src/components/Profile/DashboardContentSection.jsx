@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { 
   User, CreditCard, Bell, Shield, 
   Calendar, Camera, ChevronRight, 
@@ -10,6 +10,7 @@ import {
 import userAvatar from "../../assets/teacher_robert.png"; 
 import center1Img from "../../assets/ila_center.png";
 import center2Img from "../../assets/vus_center.png";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -45,24 +46,42 @@ const recentActivities = [
   },
 ];
 
-const savedCenters = [
-  {
-    name: "British Council",
-    rating: "4.9",
-    image: center1Img,
-    tags: ["IELTS", "CAMBRIDGE"],
-  },
-  {
-    name: "ILA Vietnam",
-    rating: "4.7",
-    image: center2Img,
-    tags: ["GIAO TIẾP", "TIẾNG ANH TRẺ EM"],
-  },
-];
+
 
 
 export const DashboardContentSection = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState({ fullName: "Nguyễn Văn A" });
+  const [recentlyViewed, setRecentlyViewed] = useState([]);
+  const [savedCenters, setSavedCenters] = useState([]);
+
+  useEffect(() => {
+    // 1. Get user info
+    const currentUser = JSON.parse(localStorage.getItem("user") || localStorage.getItem("currentUser") || "null");
+    if (currentUser) {
+      setUser(currentUser);
+    }
+
+    // 2. Fetch all centers to filter for recently viewed and saved
+    const fetchCenters = async () => {
+      try {
+        const response = await axios.get("/api/centers");
+        const allCenters = response.data;
+        
+        const recentIds = JSON.parse(localStorage.getItem("recentlyViewed") || "[]");
+        const favoriteIds = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+        const recent = recentIds.map(id => allCenters.find(c => String(c.id) === String(id))).filter(Boolean);
+        const saved = favoriteIds.map(id => allCenters.find(c => String(c.id) === String(id))).filter(Boolean);
+
+        setRecentlyViewed(recent);
+        setSavedCenters(saved);
+      } catch (err) {
+        console.error("Error fetching data for profile:", err);
+      }
+    };
+    fetchCenters();
+  }, []);
 
   const handleLogout = () => {
     Swal.fire({
@@ -107,7 +126,7 @@ export const DashboardContentSection = () => {
             </button>
           </div>
           
-          <h2 className="text-2xl font-bold text-[#191c1e]">Nguyễn Văn A</h2>
+          <h2 className="text-2xl font-bold text-[#191c1e]">{user.fullName || user.username || "Người dùng"}</h2>
           <div className="mt-2 bg-[#feaa0033] px-3 py-1 rounded-full">
             <span className="text-[10px] font-black text-[#825500] tracking-wider">PREMIUM MEMBER</span>
           </div>
@@ -178,11 +197,7 @@ export const DashboardContentSection = () => {
           </div>
           
           <div className="flex flex-col gap-4">
-            {[
-              { id: 1, name: "British Council", city: "Hồ Chí Minh", price: "9.500.000đ", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop", rating: 4.9 },
-              { id: 7, name: "Trung tâm Tiếng Trung SHZ", city: "Hồ Chí Minh", price: "4.500.000đ", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?q=80&w=500&auto=format&fit=crop", rating: 4.8 },
-              { id: 8, name: "Riki Nihongo - Tiếng Nhật", city: "Hà Nội", price: "5.200.000đ", image: "https://images.unsplash.com/photo-1526481280693-3bfa7561693f?q=80&w=500&auto=format&fit=crop", rating: 4.9 },
-            ].map((center) => (
+            {recentlyViewed.length > 0 ? recentlyViewed.map((center) => (
               <div 
                 key={center.id}
                 onClick={() => navigate(`/center-detail?id=${center.id}`)}
@@ -196,9 +211,9 @@ export const DashboardContentSection = () => {
                     <div>
                       <h3 className="font-bold text-[#191c1e] group-hover:text-primary transition-colors">{center.name}</h3>
                       <div className="flex items-center gap-2 mt-1">
-                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{center.city}</span>
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{center.district}</span>
                         <span className="text-gray-200">•</span>
-                        <span className="text-[10px] font-black text-primary uppercase tracking-widest">{center.price}</span>
+                        <span className="text-[10px] font-black text-primary uppercase tracking-widest">{center.city}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-1 bg-yellow-50 px-2 py-0.5 rounded-lg shrink-0">
@@ -211,7 +226,11 @@ export const DashboardContentSection = () => {
                   <ChevronRight size={20} />
                 </div>
               </div>
-            ))}
+            )) : (
+              <div className="py-10 text-center bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+                <p className="text-gray-400 font-medium">Bạn chưa xem trung tâm nào gần đây.</p>
+              </div>
+            )}
           </div>
         </section>
 
@@ -225,33 +244,49 @@ export const DashboardContentSection = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {savedCenters.map((center, index) => (
+            {savedCenters.length > 0 ? savedCenters.map((center, index) => (
               <article key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-40">
                   <img src={center.image} alt={center.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <button className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full text-red-500 shadow-sm hover:scale-110 transition-transform">
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+                      const updated = favorites.filter(id => String(id) !== String(center.id));
+                      localStorage.setItem("favorites", JSON.stringify(updated));
+                      setSavedCenters(prev => prev.filter(c => c.id !== center.id));
+                    }}
+                    className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full text-red-500 shadow-sm hover:scale-110 transition-transform"
+                  >
                     <Heart size={18} fill="currentColor" />
                   </button>
                 </div>
                 <div className="p-5 flex flex-col gap-4">
                   <div className="flex justify-between items-center">
-                    <h3 className="font-bold text-[#191c1e] text-lg">{center.name}</h3>
+                    <h3 className="font-bold text-[#191c1e] text-lg line-clamp-1">{center.name}</h3>
                     <div className="flex items-center gap-1.5 bg-yellow-50 px-2 py-1 rounded-lg">
                       <Star size={14} className="text-yellow-500 fill-yellow-500" />
                       <span className="text-xs font-bold text-[#825500]">{center.rating}</span>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {center.tags.map(tag => (
+                    {center.tags.slice(0, 2).map(tag => (
                       <span key={tag} className="text-[9px] font-bold text-gray-500 bg-gray-50 px-2 py-1 rounded border border-gray-100 uppercase">{tag}</span>
                     ))}
                   </div>
-                  <button className="w-full py-2.5 border-2 border-primary text-primary rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                  <button 
+                    onClick={() => navigate(`/center-detail?id=${center.id}`)}
+                    className="w-full py-2.5 border-2 border-primary text-primary rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all"
+                  >
                     Xem chi tiết
                   </button>
                 </div>
               </article>
-            ))}
+            )) : (
+              <div className="col-span-2 py-10 text-center bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+                <p className="text-gray-400 font-medium">Danh sách yêu thích trống.</p>
+              </div>
+            )}
           </div>
         </section>
 

@@ -17,8 +17,7 @@ function App() {
                     Pizza House
                   </a>
                   <button
-                    className="navbar-toggler"
-                    type="button"
+                    className="navbar-toggler"type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
@@ -97,10 +96,9 @@ function App() {
                       alt="..."
                     />
                     <div className="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
+                      <h5>Neapolitan Pizza</h5>
                       <p>
-                        Some representative placeholder content for the first
-                        slide.
+                        If you are looking for a traditional Italian pizza, the Neapolitan is the best option!
                       </p>
                     </div>
                   </div>
@@ -111,10 +109,9 @@ function App() {
                       alt="..."
                     />
                     <div className="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
+                      <h5>Neapolitan Pizza</h5>
                       <p>
-                        Some representative placeholder content for the second
-                        slide.
+                        If you are looking for a traditional Italian pizza, the Neapolitan is the best option!
                       </p>
                     </div>
                   </div>
@@ -125,10 +122,9 @@ function App() {
                       alt="..."
                     />
                     <div className="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
+                      <h5>Neapolitan Pizza</h5>
                       <p>
-                        Some representative placeholder content for the third
-                        slide.
+                        If you are looking for a traditional Italian pizza, the Neapolitan is the best option!
                       </p>
                     </div>
                   </div>
@@ -167,11 +163,17 @@ function App() {
                 <h2>Our Menu</h2>
               <div className='col-md-3'>
                 <div className="card">
-  <img src="../menu1.jpg" className="card-img-top" alt="..."/>
+                  <div
+                      className="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1"style={{ fontWeight: "bold", fontSize: "12px", width: "100px", textAlign: "center" }}>Sale
+                  </div>
+                    <img src="../menu1.jpg" className="card-img-top" alt="..."/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="form-control btn btn-dark">Go somewhere</a>
+    <h5 className="card-title">Margherita Pizza</h5>
+    <p >
+        <span className="text-muted text-decoration-line-through me-2" style={{ float: "left" }}>$40.00</span>
+        <span className="text-warning fw-bold" style={{ float: "left" }}>$24.00</span>
+     </p>
+    <a href="#" className="form-control btn btn-dark">Buy</a>
   </div>
 </div>
               </div>
@@ -179,29 +181,42 @@ function App() {
                 <div className="card">
   <img src="../menu2.jpg" className="card-img-top" alt="..."/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="form-control btn btn-dark">Go somewhere</a>
+    <h5 className="card-title">Mushroomushroom Pizza</h5>
+    <p >
+        <span className="text-muted " style={{ float: "left" }}>$25.00</span>
+     </p>
+    <a href="#" className="form-control btn btn-dark">Buy</a>
   </div>
 </div>
               </div>
               <div className='col-md-3'>
                 <div className="card">
+                  <div
+                      className="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1"style={{ fontWeight: "bold", fontSize: "12px", width: "100px", textAlign: "center" }}>New
+                  </div>
   <img src="../menu3.jpg" className="card-img-top" alt="..."/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="form-control btn btn-dark">Go somewhere</a>
+    <h5 className="card-title">Margherita Pizza</h5>
+    <p >
+        <span className="text-muted" style={{ float: "left" }}>$30.00</span>
+     </p>
+    <a href="#" className="form-control btn btn-dark">Buy</a>
   </div>
 </div>
               </div>
               <div className='col-md-3'>
                 <div className="card">
+                  <div
+                      className="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1"style={{ fontWeight: "bold", fontSize: "12px", width: "100px", textAlign: "center" }}>Sale
+                  </div>
   <img src="../menu4.jpg" className="card-img-top" alt="..."/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="form-control btn btn-dark">Go somewhere</a>
+    <h5 className="card-title">Margherita Pizza</h5>
+    <p >
+        <span className="text-muted text-decoration-line-through me-2" style={{ float: "left" }}>$50.00</span>
+        <span className="text-warning fw-bold" style={{ float: "left" }}>$30.00</span>
+     </p>
+    <a href="#" className="form-control btn btn-dark">Buy</a>
   </div>
 </div>
               </div>
@@ -215,14 +230,14 @@ function App() {
                 <h2 className='text-center'>Book your table</h2>
                 <div class="row mb-3">
   <div className="col">
-    <input type="text" className="form-control" placeholder="First name" aria-label="First name"/>
+    <input type="text" className="form-control" placeholder="Your Name*" aria-label="Your Name*"/>
   </div>
   <div className="col">
-    <input type="text" className="form-control" placeholder="Last name" aria-label="Last name"/>
+    <input type="text" className="form-control" placeholder="Your Email*" aria-label="Your Email*"/>
   </div>
   <div className="col">
       <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
+      <option selected>Select a Service</option>
       <option>...</option>
     </select>
   </div>
@@ -234,7 +249,7 @@ function App() {
 </div>
 <div className='row'>
    <div className="col">
-    <input type='submit' className='btn btn-warning' value="Send me " ></input>
+    <input type='submit' className='btn btn-warning' value="Send message" ></input>
    </div>
 </div>
                 </div>
