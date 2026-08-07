@@ -1,91 +1,6 @@
 {
   "centers": [
     {
-      "id": 1,
-      "name": "British Council (Hội đồng Anh)",
-      "city": "Hồ Chí Minh",
-      "district": "Quận 1",
-      "address": "25 Lê Duẩn, Quận 1, TP. Hồ Chí Minh",
-      "lat": 10.7825,
-      "lng": 106.702,
-      "rating": 4.9,
-      "image": "",
-      "tags": [
-        "IELTS",
-        "Tiếng Anh học thuật"
-      ],
-      "isFeatured": true
-    },
-    {
-      "id": 2,
-      "name": "VUS - Anh Văn Hội Việt Mỹ",
-      "city": "Hồ Chí Minh",
-      "district": "Quận 3",
-      "address": "189 Nguyễn Thị Minh Khai, Quận 3, TP. Hồ Chí Minh",
-      "lat": 10.776,
-      "lng": 106.685,
-      "rating": 5.0,
-      "image": "",
-      "tags": [
-        "Giao tiếp cơ bản",
-        "Tiếng Anh trẻ em"
-      ],
-      "isFeatured": false
-    },
-    {
-      "id": 3,
-      "name": "ILA Vietnam - Hà Nội",
-      "city": "Hà Nội",
-      "district": "Cầu Giấy",
-      "address": "Quận Cầu Giấy, Hà Nội",
-      "lat": 21.028,
-      "lng": 105.852,
-      "rating": 4.8,
-      "image": "",
-      "tags": [
-        "IELTS",
-        "Tiếng Anh học thuật"
-      ],
-      "isFeatured": true
-    },
-
-    {
-      "id": 5,
-      "name": "Language Link - Quy Nhơn",
-      "city": "Quy Nhơn",
-      "district": "Trần Phú",
-      "address": "Tp. Quy Nhơn, Bình Định",
-      "lat": 13.775,
-      "lng": 109.225,
-      "rating": 4.5,
-      "image": "",
-      "tags": [
-        "Tiếng Anh",
-        "Luyện thi"
-      ],
-      "isFeatured": true
-    },
-    {
-      "id": 6,
-      "name": "Ocean Edu - Cần Thơ",
-      "city": "Cần Thơ",
-      "district": "Ninh Kiều",
-      "address": "Quận Ninh Kiều, Cần Thơ",
-      "lat": 10.035,
-      "lng": 105.785,
-      "rating": 4.7,
-      "image": "",
-      "tags": [
-        "IELTS",
-        "Giao tiếp",
-        "Tiếng Anh"
-      ],
-      "isFeatured": false
-    },
-
-
-
-    {
       "id": 12,
       "name": "IELTS Fighter - Chiến binh IELTS",
       "city": "Đà Nẵng",
@@ -96,7 +11,6 @@
       "googleMapsLink": "https://www.google.com/maps/place/IELTS+Fighter+%C4%90%C3%A0+N%E1%BA%B5ng/@16.06203,108.21102,15z/data=!4m8!3m7!1s0x314219ca892a6e99:0x8a6ece43418d4997!8m2!3d16.0620301!4d108.2110199!9m1!1b1!16s%2Fg%2F11f646c84m?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0620301,
       "lng": 108.2110199,
-      "rating": 5.0,
       "image": "https://talkclass.edu.vn/wp-content/uploads/2025/08/trung-tam-tieng-anh-IELTS-Fighter.jpg",
       "tags": [
         "IELTS",
@@ -139,7 +53,6 @@
         }
       ]
     },
-
     {
       "id": 14,
       "name": "IELTS Mentor - Đà Nẵng",
@@ -151,11 +64,10 @@
       "googleMapsLink": "https://www.google.com/maps/place/IELTS+Mentor+%C4%90%C3%A0+N%E1%BA%B5ng/@16.064012,108.2099183,16z/data=!4m8!3m7!1s0x314219cdba002b35:0xc9b46bad7ab805cf!8m2!3d16.0640125!4d108.218673!9m1!1b1!16s%2Fg%2F11kpqypmdf?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0640125,
       "lng": 108.218673,
-      "rating": 4.8,
       "image": "https://wisdomagency.com/uploads/2022/11/Ielts-1024x576.png",
       "tags": [
         "IELTS",
-        "Giao tiếp cơ bản"
+        "Tiếng Anh mất gốc"
       ],
       "isFeatured": true,
       "website": "https://ieltsmentor.edu.vn/",
@@ -205,7 +117,6 @@
       "googleMapsLink": "https://www.google.com/maps/place/Trung+T%C3%A2m+Ti%E1%BA%BFng+Anh+EBest/@16.0520891,108.1846703,15z/data=!4m8!3m7!1s0x314219b899b7f36b:0x634ab2d3652e223c!8m2!3d16.040217!4d108.2144893!9m1!1b1!16s%2Fg%2F11c60j50hc?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.040217,
       "lng": 108.2144893,
-      "rating": 5.0,
       "image": "https://ebest.edu.vn/wp-content/uploads/2024/01/banner-1.webp",
       "tags": [
         "Giao tiếp cơ bản",
@@ -259,7 +170,6 @@
       "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+luy%E1%BB%87n+thi+IELTS+DOL+%C4%90%C3%ACnh+L%E1%BB%B1c+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0606208,108.2192635,17z/data=!3m1!4b1!4m6!3m5!1s0x3142197654c11507:0xdc908328a898cf76!8m2!3d16.0606208!4d108.2192635!16s%2Fg%2F11txtf94fn?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0606208,
       "lng": 108.2192635,
-      "rating": 5.0,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR4W5Z28IRjPuDlXpNVMjySjOGyS-WnnF9pw&s",
       "tags": [
         "IELTS",
@@ -313,11 +223,11 @@
       "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+Aten+%C4%90%C3%A0+N%E1%BA%B5ng+-+Ti%E1%BA%BFng+Anh+Giao+Ti%E1%BA%BFp/@16.0587321,108.2163993,17z/data=!4m8!3m7!1s0x314219b6596e67f7:0xf6f458e20884961f!8m2!3d16.0587321!4d108.2189742!9m1!1b1!16s%2Fg%2F11fnwht3r_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0587321,
       "lng": 108.2189742,
-      "rating": 5.0,
       "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJh-w8x6rZCtLlanKYKQAZjaMAxMYWWK7-keBa11AWDs_wkz12",
       "tags": [
         "Giao tiếp cơ bản",
-        "Tiếng Anh mất gốc"
+        "Tiếng Anh mất gốc",
+        "Giao tiếp cho người đi làm"
       ],
       "isFeatured": true,
       "website": "https://aten.edu.vn/",
@@ -367,11 +277,10 @@
       "googleMapsLink": "https://www.google.com/maps/place/Trung+T%C3%A2m+Luy%E1%BB%87n+Thi+Ielts+-+Res+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0580743,108.2206854,17z/data=!4m8!3m7!1s0x314219738979cb8d:0xf2100af74b9434f1!8m2!3d16.0580743!4d108.2206854!9m1!1b1!16s%2Fg%2F11qmc0dtqk?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0580743,
       "lng": 108.2206854,
-      "rating": 4.3,
       "image": "https://res.edu.vn/wp-content/uploads/2021/11/cover-cac-khoa-hoc-tai-res-1400x533.jpg",
       "tags": [
         "IELTS",
-        "Tiếng Anh trẻ em",
+        "Giao tiếp cơ bản",
         "Tiếng Anh học thuật"
       ],
       "isFeatured": true,
@@ -419,14 +328,12 @@
       "address": "24 Lê Thánh Tôn, Q. Hải Châu, Đà Nẵng",
       "phone": "1800 2098",
       "zaloLink": "https://zalo.me/s/106038577634250901/",
-      "googleMapsLink": "https://www.google.com/maps/place/Anh+ng%E1%BB%AF+AMES+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0738831,108.2163057,17z/data=!4m8!3m7!1s0x31421833d5b503cd:0xa01308081daa9e49!8m2!3d16.0738831!4d108.2188806!9m1!1b1!16s%2Fg%2F11b6d4z8xr?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+      "googleMapsLink": "https://www.google.com/maps/place/Anh ng%E1%BB%AF+AMES+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0738831,108.2163057,17z/data=!4m8!3m7!1s0x31421833d5b503cd:0xa01308081daa9e49!8m2!3d16.0738831!4d108.2188806!9m1!1b1!16s%2Fg%2F11b6d4z8xr?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0738831,
       "lng": 108.2188806,
-      "rating": 4.7,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnmIF-3iYH4HJtYfP8YWYf1lC9unAaK4gaw&s",
       "tags": [
         "IELTS",
-        "Tiếng Anh trẻ em",
         "Giao tiếp cho người đi làm"
       ],
       "isFeatured": true,
@@ -477,11 +384,11 @@
       "googleMapsLink": "https://www.google.com/maps/place/TT+Anh+Ng%E1%BB%AF+MB+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0607409,108.221372,17z/data=!4m8!3m7!1s0x3142193441e9ea5f:0xa0f2eaa3f9cb877f!8m2!3d16.0607409!4d108.221372!9m1!1b1!16s%2Fg%2F11tgd9962j?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0607409,
       "lng": 108.221372,
-      "rating": 4.9,
       "image": "https://studentjob.donga.edu.vn/Content/images/doanhnghiep/i1684746644.png",
       "tags": [
         "Giao tiếp cơ bản",
-        "Tiếng Anh mất gốc"
+        "Tiếng Anh mất gốc",
+        "Giao tiếp cho người đi làm"
       ],
       "isFeatured": true,
       "website": "https://anhngumb.com/",
@@ -531,11 +438,10 @@
       "googleMapsLink": "https://www.google.com/maps/place/Ms+Hoa+TOEIC+%7C+Trung+t%C3%A2m+Anh+ng%E1%BB%AF+Ms+Hoa,+Thanh+Kh%C3%AA,+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0600537,108.2118988,16.48z/data=!4m8!3m7!1s0x3142197c9aeec701:0x550358e9561a6f0f!8m2!3d16.0600014!4d108.2129628!9m1!1b1!16s%2Fg%2F11g0j4w60f?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0600014,
       "lng": 108.2129628,
-      "rating": 5.0,
       "image": "https://ebest.edu.vn/wp-content/uploads/2023/12/Ms-Hoa-1024x355.jpg",
       "tags": [
-        "Giao tiếp cho người đi làm",
-        "Giao tiếp cơ bản"
+        "Giao tiếp cơ bản",
+        "Giao tiếp cho người đi làm"
       ],
       "isFeatured": true,
       "website": "https://www.anhngumshoa.com/",
@@ -585,9 +491,9 @@
       "googleMapsLink": "https://www.google.com/maps/place/TT+Anh+Ng%E1%BB%AF+MB+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0607409,108.221372,17z/data=!4m8!3m7!1s0x3142193441e9ea5f:0xa0f2eaa3f9cb877f!8m2!3d16.0607409!4d108.221372!9m1!1b1!16s%2Fg%2F11tgd9962j?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0607409,
       "lng": 108.221372,
-      "rating": 4.9,
       "image": "https://iris.edu.vn/wp-content/uploads/2025/08/iris-speak-yourself-1.jpg",
       "tags": [
+        "Tiếng Anh trẻ em",
         "Giao tiếp cơ bản",
         "Tiếng Anh mất gốc"
       ],
@@ -627,11 +533,11 @@
       "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BA%BFng+Anh+WISE+ENGLISH/@16.060676,108.210878,17z/data=!4m16!1m9!3m8!1s0x31421760b4df3df7:0xcd115cd3801dcb5a!2sTrung+t%C3%A2m+ti%E1%BA%BFng+Anh+WISE+ENGLISH!8m2!3d16.060676!4d108.210878!9m1!1b1!16s%2Fg%2F11c6lwzch7!3m5!1s0x31421760b4df3df7:0xcd115cd3801dcb5a!8m2!3d16.060676!4d108.210878!16s%2Fg%2F11c6lwzch7?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.060676,
       "lng": 108.210878,
-      "rating": 4.7,
       "image": "https://wiseenglish.edu.vn/wp-content/uploads/2025/02/khai-truong-nlp-5.jpg",
       "tags": [
         "IELTS",
-        "Tiếng Anh học thuật"
+        "Tiếng Anh học thuật",
+        "Giao tiếp cho người đi làm"
       ],
       "isFeatured": true,
       "website": "https://wiseenglish.edu.vn/",
@@ -681,10 +587,9 @@
       "googleMapsLink": "https://www.google.com/maps/place/Trung+t%C3%A2m+Anh+ng%E1%BB%AF+EMMA+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0655961,108.1711465,15z/data=!4m8!3m7!1s0x3142190195b1105f:0x5a6e0a9bb8b888cb!8m2!3d16.0656543!4d108.1892577!9m1!1b1!16s%2Fg%2F11h7s4k5zj?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0656543,
       "lng": 108.1892577,
-      "rating": 5.0,
-      "image": "https://scontent.fdad3-8.fna.fbcdn.net/v/t39.30808-6/476600569_1159679309500534_7358844277145892921_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Z8ROUgc1QFoQ7kNvwEFG9Nr&_nc_oc=AdoJfHZ8pbuRuMPr3bMtbPVIA3uxX6zyMKOvZvLEo8fkqX23qWj2fOai5GW-de2MZZ0&_nc_zt=23&_nc_ht=scontent.fdad3-8.fna&_nc_gid=fO5cMODG17vHhZj49ehOFQ&_nc_ss=7f2a8&oh=00_Af4mHLnYcDzGvP27694FS_sZ41wqQ6SYLkvVxyxxlflPCQ&oe=6A0E50A8",
+      "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS9tT9PbgkWVd5vtruaEd4lw2ceom6R32rYiVIPXdokgG22GJFa",
       "tags": [
-        "Giao tiếp cơ bản",
+        "IELTS",
         "Tiếng Anh mất gốc"
       ],
       "isFeatured": true,
@@ -735,7 +640,6 @@
       "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+ZIM/@16.0599636,108.2078482,17z/data=!4m8!3m7!1s0x31421956ec373703:0xa0f4a43074863054!8m2!3d16.0599637!4d108.2127191!9m1!1b1!16s%2Fg%2F11jzqs6_q1?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0599637,
       "lng": 108.2127191,
-      "rating": 4.9,
       "image": "https://data.vieclamdanang.vn/vieclamdanang/2024/1/26/he-thong-anh-ngu-zim-zim-academy-1-638418624225691671.jpg",
       "tags": [
         "IELTS",
@@ -743,7 +647,7 @@
       ],
       "isFeatured": true,
       "website": "https://zim.vn/",
-      "description": "ZIM Academy là hệ thống trường đào tạo tiếng Anh và luyện thi chứng chỉ quốc tế uy tín, nổi tiếng with phương pháp Cá nhân hóa học tập dựa trên nền tảng dữ liệu lớn. Trung tâm cam kết giúp học viên đạt mục tiêu cam kết bằng hệ thống giáo trình bài bản và phương pháp tư duy ngôn ngữ tối ưu.",
+      "description": "ZIM Academy là hệ thống trường đào tạo tiếng Anh và luyện thi chứng chỉ quốc tế uy tín, nổi tiếng với phương pháp Cá nhân hóa học tập dựa trên nền tảng dữ liệu lớn. Trung tâm cam kết giúp học viên đạt mục tiêu cam kết bằng hệ thống giáo trình bài bản và phương pháp tư duy ngôn ngữ tối ưu.",
       "stats": {
         "students": "30.000+ (Toàn hệ thống)",
         "teachers": "150+",
@@ -789,15 +693,15 @@
       "googleMapsLink": "https://www.google.com/maps/place/Anh+Ng%E1%BB%AF+C%C3%B4+Mai/@16.0647372,108.1860978,17z/data=!4m8!3m7!1s0x69abd4632c4e6be9:0xa50f0395bc02e678!8m2!3d16.0647372!4d108.1886727!9m1!1b1!16s%2Fg%2F11ts0hb4m6?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
       "lat": 16.0647372,
       "lng": 108.1886727,
-      "rating": 4.9,
-      "image": "https://scontent.fdad3-8.fna.fbcdn.net/v/t39.30808-6/486943881_1087842316720518_5598618828728948606_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lnIS8lxXMIEQ7kNvwHRRG5G&_nc_oc=Adr5ImFuBvhgJwXM5kXrR20lb5YS7qdVNkpLaKYhl4Q82h6ShBbPneDJIWluCNsbt2k&_nc_zt=23&_nc_ht=scontent.fdad3-8.fna&_nc_gid=wFyH9px3c7M3-bKx5DqGrg&_nc_ss=7f2a8&oh=00_Af5ZmmqjldBJyZurFUG-Q6bTHzmpIeV_gbOWxea1aGNtMQ&oe=6A0E484E",
+      "image": "https://maienglish.edu.vn/wp-content/uploads/2024/08/to-hop-giao-duc-m.a.i-2.jpg",
       "tags": [
-        "Tiếng Anh mất gốc",
-        "Giao tiếp cơ bản"
+        "IELTS",
+        "Giao tiếp cơ bản",
+        "Tiếng Anh mất gốc"
       ],
       "isFeatured": true,
       "website": "https://maienglish.edu.vn/",
-      "description": "Tổ chức Giáo dục MAI là đơn vị đào tạo tiếng Anh uy tín tại Đà Nẵng, nổi bật with các chương trình xóa mất gốc và luyện thi chứng chỉ quốc tế cấp tốc. Với phương châm học tập thực chất, MAI Education giúp học viên xây dựng lại nền tảng vững chắc và tự tin sử dụng tiếng Anh trong môi trường học thuật lẫn công việc.",
+      "description": "Tổ chức Giáo dục MAI là đơn vị đào tạo tiếng Anh uy tín tại Đà Nẵng, nổi bật với các chương trình xóa mất gốc và luyện thi chứng chỉ quốc tế cấp tốc. Với phương châm học tập thực chất, MAI Education giúp học viên xây dựng lại nền tảng vững chắc và tự tin sử dụng tiếng Anh trong môi trường học thuật lẫn công việc.",
       "stats": {
         "students": "3.000+",
         "teachers": "15+",
@@ -831,50 +735,6 @@
           "link": "https://maienglish.edu.vn/intermediate/"
         }
       ]
-    },
-    {
-      "lat": 10.012,
-      "lng": 105.805,
-      "rating": 4.5,
-      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop",
-      "tags": [
-        "Tiếng Trung",
-        "Cơ bản"
-      ],
-      "isFeatured": false
-    },
-    {
-      "id": 18,
-      "name": "E-Space - Tiếng Anh Trực Tuyến",
-      "city": "Hà Nội",
-      "district": "Thanh Xuân",
-      "address": "Nguyễn Trãi, Thanh Xuân, Hà Nội",
-      "lat": 20.998,
-      "lng": 105.812,
-      "rating": 4.7,
-      "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=500&auto=format&fit=crop",
-      "tags": [
-        "Tiếng Anh",
-        "Online 1-1",
-        "Tiết kiệm"
-      ],
-      "isFeatured": false
-    },
-    {
-      "id": 20,
-      "name": "Zhongwen Center - Tân Bình",
-      "city": "Hồ Chí Minh",
-      "district": "Tân Bình",
-      "address": "Hoàng Văn Thụ, Tân Bình, TP. Hồ Chí Minh",
-      "lat": 10.798,
-      "lng": 106.662,
-      "rating": 4.6,
-      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=500&auto=format&fit=crop",
-      "tags": [
-        "Tiếng Trung",
-        "HSK 4-5"
-      ],
-      "isFeatured": false
     }
   ],
   "users": [
@@ -907,6 +767,15 @@
       "username": "HE186875",
       "password": "123456",
       "fullName": "Sinh viên HE186875"
+    },
+    {
+      "id": "1780931610922",
+      "username": "longdaibui@gmail.com",
+      "email": "longdaibui@gmail.com",
+      "fullName": "đại bùi",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI1zXETrnNNCNv3uiHCVA18DXMM95Zl3BGuB6ll2sLPOAisbg=s96-c",
+      "role": "user",
+      "password": "OAuthUser_Google"
     }
   ],
   "reviews": [],

@@ -24,10 +24,19 @@ export const SearchResultsSection = () => {
 
   const [allCenters, setAllCenters] = useState([]);
   const [filteredCenters, setFilteredCenters] = useState([]);
+  const getInitialLocation = () => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const districtQuery = queryParams.get("district");
+    if (districtQuery) {
+      return `${districtQuery}, Đà Nẵng`;
+    }
+    return "Tất cả";
+  };
+
   const [selectedLanguages, setSelectedLanguages] = useState([]);
   const [selectedMode, setSelectedMode] = useState("Tại trung tâm");
   const [priceRange, setPriceRange] = useState(15);
-  const [selectedLocation, setSelectedLocation] = useState("Quận Hải Châu, Đà Nẵng");
+  const [selectedLocation, setSelectedLocation] = useState(getInitialLocation());
   const [selectedSort, setSelectedSort] = useState("Phổ biến nhất");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -46,8 +55,8 @@ export const SearchResultsSection = () => {
 
     // Handle URL query parameters for auto-checking filters
     const queryParams = new URLSearchParams(window.location.search);
-    const category = queryParams.get("q");
-    if (category) {
+    const categoryQuery = queryParams.get("q");
+    if (categoryQuery) {
       // Map home page categories to filter IDs if they differ
       const categoryMap = {
         "Luyện thi IELTS": "IELTS",
@@ -56,8 +65,11 @@ export const SearchResultsSection = () => {
         "Tiếng Anh Trẻ em": "Tiếng Anh trẻ em"
       };
       
-      const filterId = categoryMap[category] || category;
-      setSelectedLanguages([filterId]);
+      const filterIds = categoryQuery.split(",").map(cat => {
+        const trimmedCat = cat.trim();
+        return categoryMap[trimmedCat] || trimmedCat;
+      });
+      setSelectedLanguages(filterIds);
     }
   }, []);
 
@@ -81,8 +93,8 @@ export const SearchResultsSection = () => {
     }
 
     // Sorting
-    if (selectedSort === "Đánh giá cao nhất") {
-      result = [...result].sort((a, b) => b.rating - a.rating);
+    if (selectedSort === "Mới nhất") {
+      result = [...result].sort((a, b) => b.id - a.id);
     }
 
     setFilteredCenters(result);
@@ -98,7 +110,7 @@ export const SearchResultsSection = () => {
   const clearAllFilters = () => {
     setSelectedLanguages([]);
     setPriceRange(15);
-    setSelectedLocation("Quận Hải Châu, Đà Nẵng");
+    setSelectedLocation("Tất cả");
     setSelectedSort("Phổ biến nhất");
   };
 
@@ -164,8 +176,6 @@ export const SearchResultsSection = () => {
               </div>
             </div>
 
-
-
             {/* Location Filter */}
             <div>
               <h3 className="mb-5 text-[11px] font-black tracking-[0.1em] text-[#6b7280] uppercase">Khu vực</h3>
@@ -177,12 +187,8 @@ export const SearchResultsSection = () => {
                   className="w-full appearance-none rounded-xl border-2 border-[#e5e7eb] bg-gray-50/50 py-3 pl-12 pr-10 text-sm font-bold text-[#374151] outline-none transition-all focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/5"
                 >
                   <option value="Tất cả">Tất cả khu vực</option>
-                  <option value="Quận 1, TP. HCM">Quận 1, TP. HCM</option>
-                  <option value="Quận 3, TP. HCM">Quận 3, TP. HCM</option>
-                  <option value="Thủ Đức, TP. HCM">Thủ Đức, TP. HCM</option>
-                  <option value="Cầu Giấy, Hà Nội">Cầu Giấy, Hà Nội</option>
-                  <option value="Quận Hải Châu, Đà Nẵng">Quận Hải Châu, Đà Nẵng</option>
-                  <option value="Quận Thanh Khê, Đà Nẵng">Quận Thanh Khê, Đà Nẵng</option>
+                  <option value="Quận Hải Châu, Đà Nẵng">Quận Hải Châu</option>
+                  <option value="Quận Thanh Khê, Đà Nẵng">Quận Thanh Khê</option>
                 </select>
                 <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
               </div>
@@ -209,7 +215,7 @@ export const SearchResultsSection = () => {
                   className="appearance-none rounded-xl border border-gray-200 bg-white py-2 pl-4 pr-10 text-xs font-black text-primary outline-none hover:border-primary/50 transition-colors cursor-pointer shadow-sm"
                 >
                   <option>Phổ biến nhất</option>
-                  <option>Đánh giá cao nhất</option>
+                  <option>Mới nhất</option>
                 </select>
                 <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none" />
               </div>
@@ -243,10 +249,7 @@ export const SearchResultsSection = () => {
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
-                    <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
-                      <Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
-                      <span className="text-xs font-black text-[#111827]">{center.rating}</span>
-                    </div>
+                    <div></div>
                     <div className="flex items-center gap-1 text-white text-[10px] font-bold uppercase tracking-wider">
                       <MapPin size={12} className="text-secondary" />
                       {center.district.replace("Quận ", "")}

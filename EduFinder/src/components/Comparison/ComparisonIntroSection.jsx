@@ -4,7 +4,7 @@ export const ComparisonIntroSection = () => {
   return (
     <section className="flex flex-col items-start gap-4 relative self-stretch w-full">
       <header className="flex flex-col items-start relative self-stretch w-full">
-        <h2 className="relative flex items-center self-stretch font-bold text-[#003d9b] text-[28px] tracking-tight leading-9">
+        <h2 className="relative flex items-center self-stretch font-bold text-primary text-[28px] tracking-tight leading-9">
           So sánh trung tâm Anh ngữ
         </h2>
       </header>

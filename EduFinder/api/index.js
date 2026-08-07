@@ -2,10 +2,16 @@ const express = require('express');
 const server = express();
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 const getDb = () => {
   const dbPath = path.join(__dirname, 'database.json');
   return JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+};
+
+const saveDb = (data) => {
+  const dbPath = path.join(__dirname, 'database.json');
+  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf8');
 };
 
 server.use(express.json());
@@ -40,8 +46,11 @@ server.get('/api/users', (req, res) => {
 
 // POST /api/users (đăng ký)
 server.post('/api/users', (req, res) => {
+  const data = getDb();
   const newUser = { ...req.body, id: Date.now().toString() };
+  if (!data.users) data.users = [];
   data.users.push(newUser);
+  saveDb(data);
   res.status(201).json(newUser);
 });
 
@@ -53,9 +62,11 @@ server.get('/api/reviews', (req, res) => {
 
 // POST /api/reviews
 server.post('/api/reviews', (req, res) => {
+  const data = getDb();
   const newReview = { ...req.body, id: Date.now().toString() };
   if (!data.reviews) data.reviews = [];
   data.reviews.push(newReview);
+  saveDb(data);
   res.status(201).json(newReview);
 });
 
@@ -67,11 +78,17 @@ server.get('/api/registrations', (req, res) => {
 
 // POST /api/registrations
 server.post('/api/registrations', (req, res) => {
+  const data = getDb();
   const newReg = { ...req.body, id: Date.now().toString() };
   if (!data.registrations) data.registrations = [];
   data.registrations.push(newReg);
+  saveDb(data);
   res.status(201).json(newReg);
 });
+
+// ====== CHATBOT ======
+const chatHandler = require('./chat');
+server.post('/api/chat', (req, res) => chatHandler(req, res));
 
 module.exports = server;
 

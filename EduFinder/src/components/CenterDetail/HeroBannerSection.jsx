@@ -63,7 +63,7 @@ export const HeroBannerSection = () => {
                 <span className="text-2xl font-bold text-white">4.500.000 VNĐ</span>
                 <span className="text-sm text-white/60">/ tháng</span>
               </div>
-              <button className="mt-4 w-full rounded-lg bg-[#003d9b] py-3 text-sm font-bold text-white shadow-lg transition-all hover:bg-[#002d72]">
+              <button className="mt-4 w-full rounded-lg bg-primary py-3 text-sm font-bold text-white shadow-lg transition-all hover:opacity-90">
                 Nhận tư vấn ngay
               </button>
             </div>

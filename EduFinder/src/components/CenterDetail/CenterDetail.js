@@ -88,10 +88,6 @@ const CenterDetail = () => {
                 </button>
                 <div className="flex items-center gap-3">
                   <span className="px-3 py-1 bg-secondary text-[#684300] text-[10px] font-black rounded-full uppercase tracking-widest shadow-lg">Trung tâm tiêu biểu</span>
-                  <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                    <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    <span className="font-bold text-sm text-white">{center.rating}</span>
-                  </div>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">{center.name}</h1>
                 <div className="flex items-center gap-3 text-white/90">
@@ -198,7 +194,10 @@ const CenterDetail = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <button className="w-full py-4 bg-primary text-white font-black rounded-xl hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 uppercase tracking-tight">
+                <button 
+                  onClick={() => window.dispatchEvent(new Event('open-chatbot'))}
+                  className="w-full py-4 bg-primary text-white font-black rounded-xl hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 uppercase tracking-tight"
+                >
                   Tư vấn miễn phí
                 </button>
               </div>

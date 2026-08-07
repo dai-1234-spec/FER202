@@ -26,11 +26,7 @@ export const ComparisonGridDisplaySection = ({ providers }) => {
               <div className="min-h-[3.5rem] flex flex-col justify-center">
                 <h3 className="font-black text-[#191c1e] text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">{provider.name}</h3>
               </div>
-              <div className="flex items-center gap-2 mt-2">
-                <Star size={18} className="text-yellow-500 fill-yellow-500" />
-                <span className="text-base font-black text-[#191c1e]">{provider.rating}</span>
-                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider ml-1">/ 5.0</span>
-              </div>
+
             </div>
           ))}
         </div>

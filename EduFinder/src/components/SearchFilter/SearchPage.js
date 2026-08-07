@@ -41,15 +41,15 @@ const createPriceIcon = (center, isActive) => {
       <div class="relative">
         <div class="w-8 h-8 rounded-full shadow-xl flex items-center justify-center transition-all border-2 ${
           isActive 
-          ? "bg-[#0052cc] text-white border-white scale-125 z-[2000]" 
-          : "bg-white text-[#0052cc] border-[#0052cc] hover:scale-110"
+          ? "bg-[#6355f6] text-white border-white scale-125 z-[2000]" 
+          : "bg-white text-[#6355f6] border-[#6355f6] hover:scale-110"
         }">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
             <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
           </svg>
         </div>
-        ${isActive ? '<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#0052cc] rotate-45 border-r border-b border-white"></div>' : ''}
+        ${isActive ? '<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#6355f6] rotate-45 border-r border-b border-white"></div>' : ''}
       </div>
     `,
     iconSize: [32, 32],
@@ -58,19 +58,11 @@ const createPriceIcon = (center, isActive) => {
 };
 
 const cityCoords = {
-  "Hồ Chí Minh": [10.7769, 106.7009],
-  "Hà Nội": [21.0285, 105.8542],
-  "Đà Nẵng": [16.0544, 108.2022],
-  "Quy Nhơn": [13.782, 109.219],
-  "Cần Thơ": [10.0333, 105.7833]
+  "Đà Nẵng": [16.0544, 108.2022]
 };
 
 const districtsByCity = {
-  "Hồ Chí Minh": ["Tất cả Quận/Huyện", "Quận 1", "Quận 3", "Quận 7", "Bình Thạnh", "Gò Vấp", "Thủ Đức", "Tân Bình"],
-  "Hà Nội": ["Tất cả Quận/Huyện", "Cầu Giấy", "Đống Đa", "Hai Bà Trưng", "Thanh Xuân", "Hà Đông", "Nam Từ Liêm"],
-  "Đà Nẵng": ["Tất cả Quận/Huyện", "Quận Hải Châu", "Quận Thanh Khê", "Quận Sơn Trà", "Quận Ngũ Hành Sơn", "Quận Liên Chiểu", "Quận Cẩm Lệ", "Huyện Hòa Vang", "Huyện Hoàng Sa"],
-  "Quy Nhơn": ["Tất cả Quận/Huyện", "Ghềnh Ráng", "Nguyễn Văn Cừ", "Quang Trung", "Trần Phú"],
-  "Cần Thơ": ["Tất cả Quận/Huyện", "Ninh Kiều", "Cái Răng", "Bình Thủy", "Ô Môn"]
+  "Đà Nẵng": ["Tất cả Quận/Huyện", "Quận Hải Châu", "Quận Thanh Khê"]
 };
 
 const ITEMS_PER_PAGE = 5;
@@ -84,8 +76,8 @@ const SearchFilterPage = () => {
   const [filteredCenters, setFilteredCenters] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCenter, setSelectedCenter] = useState(null);
-  const [selectedCity, setSelectedCity] = useState(queryParams.get("city") || "Đà Nẵng");
-  const [selectedDistrict, setSelectedDistrict] = useState("Tất cả Quận/Huyện");
+  const [selectedCity, setSelectedCity] = useState("Đà Nẵng");
+  const [selectedDistrict, setSelectedDistrict] = useState(queryParams.get("district") || "Tất cả Quận/Huyện");
   const [searchQuery, setSearchQuery] = useState(queryParams.get("q") || "");
 
   useEffect(() => {
@@ -230,10 +222,6 @@ const SearchFilterPage = () => {
                   <div>
                     <div className="flex justify-between items-start gap-2">
                       <h3 className="font-bold text-[#191c1e] text-xs leading-tight line-clamp-1 group-hover:text-primary transition-colors">{center.name}</h3>
-                      <div className="flex items-center gap-0.5 shrink-0">
-                        <Star className="w-2.5 h-2.5 text-yellow-500 fill-yellow-500" />
-                        <span className="text-[10px] font-black text-[#191c1e]">{center.rating}</span>
-                      </div>
                     </div>
                     <div className="flex flex-wrap gap-1 mt-1.5">
                       <span className="px-1.5 py-0.5 bg-gray-50 text-[#191c1e] text-[8px] font-black rounded border border-gray-100 uppercase">{center.district}</span>
@@ -332,15 +320,11 @@ const SearchFilterPage = () => {
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex flex-col">
                             <h4 className="font-bold text-[#191c1e] text-[10px] leading-tight line-clamp-1">{selectedCenter.name}</h4>
-                            <div className="flex items-center gap-1 mt-0.5">
-                              <Star className="w-2 h-2 text-yellow-500 fill-yellow-500" />
-                              <span className="text-[9px] font-black text-[#191c1e]">{selectedCenter.rating}</span>
-                            </div>
                           </div>
                         </div>
                         <button 
                           onClick={() => navigate(`/center-detail?id=${selectedCenter.id}`)}
-                          className="w-full py-1.5 bg-[#003d9b] text-white text-[9px] font-black uppercase tracking-widest rounded-lg hover:bg-primary transition-all"
+                          className="w-full py-1.5 bg-primary text-white text-[9px] font-black uppercase tracking-widest rounded-lg hover:opacity-90 transition-all"
                         >
                           Chi tiết
                         </button>

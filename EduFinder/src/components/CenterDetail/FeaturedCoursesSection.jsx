@@ -12,7 +12,7 @@ const courses = [
     price: "6.800k",
     duration: "12 Tuần",
     badge: "IELTS INTENSIVE",
-    badgeClass: "bg-[#003d9b]",
+    badgeClass: "bg-primary",
     image: ieltsImg,
   },
   {
@@ -43,10 +43,10 @@ export const FeaturedCoursesSection = () => {
       <div className="mx-auto max-w-7xl px-4">
         <header className="mb-10 flex items-end justify-between">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-bold tracking-[2px] text-[#003d9b] uppercase">CHƯƠNG TRÌNH ĐÀO TẠO</span>
+            <span className="text-[10px] font-bold tracking-[2px] text-primary uppercase">CHƯƠNG TRÌNH ĐÀO TẠO</span>
             <h2 className="text-3xl font-bold text-[#191c1e]">Khóa học nổi bật</h2>
           </div>
-          <button className="flex items-center gap-2 text-sm font-bold text-[#003d9b] hover:underline">
+          <button className="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
             Xem tất cả <ChevronRight size={16} />
           </button>
         </header>
@@ -69,7 +69,7 @@ export const FeaturedCoursesSection = () => {
                 
                 <div className="flex items-center justify-between border-t border-[#c3c6d6] pt-4">
                   <div className="flex items-center gap-1">
-                    <span className="text-lg font-bold text-[#003d9b]">{course.price}</span>
+                    <span className="text-lg font-bold text-primary">{course.price}</span>
                     <span className="text-[10px] text-[#434654]">/khóa</span>
                   </div>
                   <div className="flex items-center gap-2 text-[#434654]">

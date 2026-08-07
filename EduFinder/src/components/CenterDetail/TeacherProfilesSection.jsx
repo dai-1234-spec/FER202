@@ -51,7 +51,7 @@ export const TeacherProfilesSection = () => {
             </div>
             
             <h3 className="text-lg font-bold text-[#191c1e]">{teacher.name}</h3>
-            <p className="mt-1 text-[10px] font-bold tracking-widest text-[#003d9b] uppercase">{teacher.role}</p>
+            <p className="mt-1 text-[10px] font-bold tracking-widest text-primary uppercase">{teacher.role}</p>
             <p className="mt-4 text-sm text-[#434654] leading-relaxed max-w-[200px]">
               {teacher.description}
             </p>

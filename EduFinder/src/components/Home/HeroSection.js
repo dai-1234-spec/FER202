@@ -4,9 +4,25 @@ import { Search, MapPin, Star, ArrowRight, Languages, BookOpen, GraduationCap, G
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, PresentationControls, Environment, ContactShadows, Float, Stage } from "@react-three/drei";
 import { Suspense } from "react";
+import SurveyModal from "../Survey/SurveyModal";
+import surveyIllustration from "../../assets/survey_illustration.png";
 
 const Model = ({ url }) => {
   const { scene } = useGLTF(url);
+  
+  React.useEffect(() => {
+    if (scene) {
+      scene.traverse((child) => {
+        if (child.isMesh && child.material) {
+          // Bỏ hiệu ứng kim loại phản chiếu để model nhận ánh sáng trực tiếp
+          child.material.metalness = 0;
+          child.material.roughness = 1;
+          child.material.needsUpdate = true;
+        }
+      });
+    }
+  }, [scene]);
+
   return <primitive object={scene} scale={2} />;
 };
 
@@ -41,7 +57,6 @@ const featuredCenters = [
   {
     id: 12,
     name: "IELTS Fighter - Chiến binh IELTS",
-    rating: "5.0",
     category: "IELTS",
     location: "Quận Hải Châu",
     description: "IELTS Fighter là trung tâm đào tạo IELTS hàng đầu Việt Nam với lộ trình học tinh gọn, dễ hiểu.",
@@ -50,7 +65,6 @@ const featuredCenters = [
   {
     id: 21,
     name: "DOL English - IELTS Đình Lực",
-    rating: "5.0",
     category: "Học thuật",
     location: "Quận Hải Châu",
     description: "Học viện Tiếng Anh Tư duy đầu tiên tại Việt Nam với phương pháp Linearthinking độc quyền.",
@@ -59,7 +73,6 @@ const featuredCenters = [
   {
     id: 16,
     name: "E-best English - Đà Nẵng",
-    rating: "4.9",
     category: "Giao tiếp",
     location: "Quận Thanh Khê",
     description: "E-best English chuyên đào tạo Tiếng Anh Giao tiếp và TOEIC với môi trường học tập năng động.",
@@ -71,6 +84,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("Đà Nẵng");
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
 
   const handleSearch = (e) => {
     if (e) e.preventDefault();
@@ -80,35 +94,78 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Content */}
-      <section className="relative w-full bg-[#003d9b] pt-32 pb-48 px-4 flex flex-col items-center text-center overflow-hidden">
+      <section className="relative w-full bg-[#e0dcfc] pt-14 pb-24 px-8 flex justify-center items-center overflow-hidden">
         {/* Background Pattern / Overlay */}
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
         
-        <div className="relative z-10 w-full max-w-4xl flex flex-col items-center justify-center gap-8 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Nâng tầm tương lai với ngôn ngữ mới
-          </h1>
-          <p className="text-[#dae2ff] text-lg max-w-2xl mx-auto">
-            Tìm kiếm và so sánh các trung tâm ngoại ngữ uy tín nhất Việt Nam chỉ trong vài giây.
-          </p>
-
-          {/* Hero Actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full animate-slide-up">
-            <button 
-              onClick={() => navigate('/center-list')}
-              className="w-full sm:w-auto px-10 py-4 bg-white text-primary font-black rounded-2xl shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-3 group"
-            >
-              <BookOpen className="w-5 h-5 text-primary group-hover:rotate-12 transition-transform" />
-              <span>Danh sách trung tâm</span>
-            </button>
-            <button 
-              onClick={() => navigate('/explore')}
-              className="w-full sm:w-auto px-10 py-4 bg-secondary text-[#684300] font-black rounded-2xl shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-3 group border border-white/20"
-            >
-              <MapPin className="w-5 h-5 text-[#684300] group-hover:bounce transition-transform" />
-              <span>Khám phá bản đồ</span>
-            </button>
+        <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+          
+          {/* Left Column: Text & Actions */}
+          <div className="flex flex-col items-start text-left gap-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#120048] leading-[1.15]">
+              Nâng tầm tương lai <br className="hidden md:inline" /> với ngôn ngữ mới
+            </h1>
+            <p className="text-[#4a3f75] text-lg max-w-lg font-medium leading-relaxed">
+              Tìm kiếm, đánh giá và so sánh các trung tâm ngoại ngữ uy tín nhất Việt Nam chỉ trong vài giây cùng trợ lý AI thông minh.
+            </p>
+ 
+            {/* Hero Actions */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4 animate-slide-up">
+              <button 
+                onClick={() => navigate('/center-list')}
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#6355f6] text-white font-bold rounded-2xl shadow-lg hover:bg-[#5244e8] hover:scale-105 transition-all flex items-center justify-center gap-2.5 group"
+              >
+                <BookOpen className="w-5 h-5 text-white group-hover:rotate-12 transition-transform" />
+                <span>Danh sách trung tâm</span>
+              </button>
+              <button 
+                onClick={() => navigate('/explore')}
+                className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#6355f6] font-bold rounded-2xl shadow-md hover:bg-gray-50 hover:scale-105 transition-all flex items-center justify-center gap-2.5 group border border-[#6355f6]/20"
+              >
+                <MapPin className="w-5 h-5 text-[#6355f6] group-hover:translate-y-[-2px] transition-transform" />
+                <span>Khám phá bản đồ</span>
+              </button>
+            </div>
           </div>
+
+          {/* Right Column: White Circular Podium with 3D model */}
+          <div className="relative w-full lg:h-[450px] aspect-square lg:aspect-auto flex items-center justify-center animate-fade-in group">
+            {/* Ultra-Vibrant Neon Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#6355f6]/40 via-violet-500/30 to-blue-600/40 rounded-full blur-[80px] opacity-80 group-hover:opacity-100 transition-all duration-1000 pointer-events-none" />
+            
+            {/* Deep Glassmorphism Podium */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-white/70 backdrop-blur-3xl rounded-full border-2 border-white/50 shadow-[0_0_100px_rgba(99,85,246,0.2)] pointer-events-none" />
+            
+            {/* Bold Interactive Rings */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[88%] h-[88%] border-4 border-dashed border-[#6355f6]/20 rounded-full animate-spin-slow pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[72%] h-[72%] border-2 border-[#6355f6]/30 rounded-full animate-reverse-spin pointer-events-none" />
+
+            {/* 3D Model Canvas */}
+            <div className="w-full h-full relative z-10">
+              <Suspense fallback={
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-8 h-8 border-4 border-[#6355f6] border-t-transparent rounded-full animate-spin" />
+                </div>
+              }>
+                <Canvas shadows dpr={[1, 2]}>
+                  <Suspense fallback={null}>
+                    <ambientLight intensity={5} />
+                    <hemisphereLight intensity={4} color="#ffffff" groundColor="#ffffff" />
+                    <directionalLight position={[10, 10, 10]} intensity={3} />
+                    <directionalLight position={[-10, 10, -10]} intensity={2} color="#f8fafc" />
+                    <Stage environment={null} intensity={1} contactShadow={false} adjustCamera={true}>
+                      <PresentationControls speed={1.5} global zoom={1.1} polar={[-0.1, Math.PI / 4]}>
+                        <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+                          <Model url="/textures/fpt.glb" />
+                        </Float>
+                      </PresentationControls>
+                    </Stage>
+                  </Suspense>
+                </Canvas>
+              </Suspense>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -151,10 +208,6 @@ const HeroSection = () => {
             <div key={center.id} className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all flex flex-col group">
               <div className="relative h-60 overflow-hidden">
                 <img src={center.image} alt={center.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
-                  <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <span className="text-sm font-black text-[#191c1e]">{center.rating}</span>
-                </div>
               </div>
               <div className="p-8 flex flex-col gap-5">
                 <div className="flex gap-2">
@@ -192,56 +245,34 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                Làm bài Test trình độ <CheckCircle className="w-5 h-5" />
+              <button 
+                onClick={() => setIsSurveyOpen(true)}
+                className="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+              >
+                Khảo sát nhu cầu <CheckCircle className="w-5 h-5" />
               </button>
-              <button className="bg-white text-[#191c1e] px-8 py-4 rounded-xl font-bold border-2 border-[#c3c6d6] hover:border-primary hover:text-primary transition-all">
+              <button 
+                onClick={() => window.dispatchEvent(new Event('open-chatbot'))}
+                className="bg-white text-[#191c1e] px-8 py-4 rounded-xl font-bold border-2 border-[#c3c6d6] hover:border-primary hover:text-primary transition-all"
+              >
                 Tư vấn 1-1 miễn phí
               </button>
             </div>
           </div>
 
-          <div className="w-full lg:w-[550px] h-[550px] relative group">
-            {/* Ultra-Vibrant Neon Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-violet-500/30 to-blue-600/40 rounded-[4rem] blur-[120px] opacity-80 group-hover:opacity-100 transition-all duration-1000 pointer-events-none" />
-            
-            {/* Deep Glassmorphism Podium */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] bg-white/70 backdrop-blur-3xl rounded-full border-2 border-white/50 shadow-[0_0_100px_rgba(0,102,255,0.25)] pointer-events-none" />
-            
-            {/* Bold Interactive Rings */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[92%] border-4 border-dashed border-primary/20 rounded-full animate-spin-slow pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] border-2 border-primary/30 rounded-full animate-reverse-spin pointer-events-none" />
-
-            <div className="w-full h-full relative z-20">
-              <Suspense fallback={
-                <div className="w-full h-full flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-[2.5rem] border-2 border-dashed border-gray-100">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Đang tải mô hình...</span>
-                  </div>
-                </div>
-              }>
-                <Canvas shadows dpr={[1, 2]}>
-                  <Suspense fallback={null}>
-                    <Stage environment="city" intensity={0.6} contactShadow={true} adjustCamera={true}>
-                      <PresentationControls
-                        speed={1.5}
-                        global
-                        zoom={1.2}
-                        polar={[-0.1, Math.PI / 4]}
-                      >
-                        <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-                          <Model url="/textures/fpt.glb" />
-                        </Float>
-                      </PresentationControls>
-                    </Stage>
-                  </Suspense>
-                </Canvas>
-              </Suspense>
-            </div>
+          {/* Right Column: Illustration replacing the 3D model/empty podium */}
+          <div className="w-full lg:w-[500px] h-[400px] lg:h-[450px] relative flex items-center justify-center p-8 z-10">
+            <img 
+              src={surveyIllustration} 
+              alt="Khảo sát nhu cầu" 
+              className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+            />
           </div>
         </div>
       </section>
+
+      {/* Survey Modal */}
+      <SurveyModal isOpen={isSurveyOpen} onClose={() => setIsSurveyOpen(false)} />
     </div>
   );
 };
